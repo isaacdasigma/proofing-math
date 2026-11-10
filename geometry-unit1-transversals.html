@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1: Lines & Transversals | Proofing Math</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .ad-slot {
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      border: 2px dashed #cbd5e1;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- TOP AD BANNER (728x90) -->
+  <div class="bg-white border-b border-slate-200 py-3 px-4">
+    <div class="max-w-6xl mx-auto flex justify-center">
+      <div class="ad-slot w-full max-w-[728px] h-[90px] rounded-lg flex flex-col items-center justify-center text-slate-400 text-xs font-mono">
+        <span>[ ADVERTISEMENT SLOT • 728x90 LEADERBOARD ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense / Sponsor Script Goes Here</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-teal-500 text-white flex items-center justify-center font-black text-xl shadow-md shadow-teal-500/20">
+          P
+        </div>
+        <span class="font-extrabold text-xl tracking-tight text-slate-900">Proofing<span class="text-teal-600">Math</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 font-semibold text-sm">
+        <a href="geometry.html" class="text-teal-600 font-bold border-b-2 border-teal-500 pb-1">Geometry</a>
+        <a href="algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra I</a>
+        <a href="advanced-algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra II / Trig</a>
+        <a href="amdm.html" class="text-slate-600 hover:text-teal-600 transition">AMDM</a>
+      </nav>
+
+      <a href="geometry-cheat-sheet.html" class="bg-slate-900 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl hover:bg-teal-600 transition shadow-sm">
+        📄 Cheat Sheets
+      </a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB HEADER -->
+  <div class="bg-slate-900 text-white py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-2 text-xs font-semibold text-teal-400 uppercase tracking-wider mb-2">
+        <a href="geometry.html" class="hover:underline">Geometry</a>
+        <span>&rsaquo;</span>
+        <span>Unit 1</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Unit 1: Lines & Transversals</h1>
+      <p class="text-slate-300 mt-2 max-w-2xl text-sm sm:text-base">
+        Master parallel line angle rules using the 10-second "Big Angle / Small Angle" shortcut without memorizing confusing jargon.
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN LESSON & SIDEBAR LAYOUT -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- LEFT COLUMN: LESSON CONTENT (8 Cols) -->
+    <article class="lg:col-span-8 space-y-8">
+
+      <!-- SECTION 1: THE CHEAT CODE -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full mb-3">
+          Core Shortcut
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">1. The "Big Angle / Small Angle" Rule</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          When a line (the <strong>transversal</strong>) cuts across two parallel lines, it makes 8 angles. Textbooks try to force you to learn 5 different definitions, but visually it's crazy simple:
+        </p>
+
+        <div class="bg-teal-900 text-white p-5 rounded-xl mb-6">
+          <p class="font-bold text-teal-300 text-base mb-2">⚡ The 10-Second Rule:</p>
+          <ul class="space-y-2 text-sm text-slate-200">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-400 font-bold">1.</span>
+              <span><strong>Every Big Angle (Obtuse)</strong> is EQUAL to every other Big Angle.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-400 font-bold">2.</span>
+              <span><strong>Every Small Angle (Acute)</strong> is EQUAL to every other Small Angle.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-400 font-bold">3.</span>
+              <span>Any <strong>1 Big Angle + 1 Small Angle = 180°</strong> (Supplementary).</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- MID-LESSON AD SLOT -->
+      <div class="ad-slot w-full h-[120px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono my-6">
+        <span>[ ADVERTISEMENT SLOT • IN-LESSON BANNER ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense Auto-Ad Location</span>
+      </div>
+
+      <!-- SECTION 2: JARGON TRANSLATOR -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">2. The Jargon Translator</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Teachers will test you on the official math names. Here is how to translate textbook terms into plain English:
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm text-slate-700 border-collapse">
+            <thead>
+              <tr class="bg-slate-100 border-b border-slate-200 font-bold text-slate-900">
+                <th class="p-3">Textbook Term</th>
+                <th class="p-3">Plain English Meaning</th>
+                <th class="p-3">Are They Equal?</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Corresponding</td>
+                <td class="p-3">Same corner position, just moved down line.</td>
+                <td class="p-3 font-bold text-emerald-600">YES (Equal)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Alternate Interior</td>
+                <td class="p-3">Opposite sides of transversal, INSIDE parallel lines.</td>
+                <td class="p-3 font-bold text-emerald-600">YES (Equal)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Alternate Exterior</td>
+                <td class="p-3">Opposite sides of transversal, OUTSIDE parallel lines.</td>
+                <td class="p-3 font-bold text-emerald-600">YES (Equal)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-slate-900">Vertical Angles</td>
+                <td class="p-3">Across from each other at the exact same "X".</td>
+                <td class="p-3 font-bold text-emerald-600">YES (Equal)</td>
+              </tr>
+              <tr class="bg-amber-50/50">
+                <td class="p-3 font-semibold text-amber-900">Consecutive Interior</td>
+                <td class="p-3 text-amber-800">Same side of transversal, INSIDE parallel lines.</td>
+                <td class="p-3 font-bold text-rose-600">NO! (Add to 180°)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 3: INTERACTIVE QUIZ -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-slate-900">3. Quick Check Quiz</h2>
+          <span class="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full">5 Questions</span>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Question 1 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q1: Angle 1 is a Big Angle measuring 125°. Angle 7 is an Alternate Exterior angle to Angle 1. What is the measure of Angle 7?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, true, 'Correct! Alternate exterior angles are equal (both are Big Angles = 125°).')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) 125°</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. Remember: Alternate Exterior angles are EQUAL.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) 55°</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. 180 - 125 = 55°, but these are equal!')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) 180°</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q2: Angle 3 (Small Angle) = 40°. Angle 5 is a Consecutive Interior angle to Angle 3. What is Angle 5?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, false, 'Incorrect. Consecutive interior angles are NOT equal!')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) 40°</button>
+              <button onclick="checkQuiz(this, true, 'Spot on! Consecutive interior angles add up to 180° (180 - 40 = 140°).')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) 140°</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. They must add to 180°.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) 90°</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM UNIT NAVIGATION -->
+      <div class="flex items-center justify-between pt-4">
+        <a href="geometry.html" class="text-sm font-bold text-slate-600 hover:text-slate-900">&larr; Back to Geometry Hub</a>
+        <a href="geometry-unit2-proofs.html" class="bg-teal-600 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-teal-700 shadow-md">Next: Unit 2 (Proofs) &rarr;</a>
+      </div>
+
+    </article>
+
+    <!-- RIGHT COLUMN: SIDEBAR ADS & CALCULATOR (4 Cols) -->
+    <aside class="lg:col-span-4 space-y-6">
+
+      <!-- INTERACTIVE CALCULATOR WIDGET -->
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <h3 class="font-bold text-slate-900 text-sm mb-3 flex items-center gap-2">
+          <span>⚡</span> Transversal Live Calculator
+        </h3>
+        <label class="block text-xs font-medium text-slate-600 mb-1">Enter Given Angle (°):</label>
+        <input type="number" id="calcAngle" value="110" min="1" max="179" oninput="calculateTransversal()" class="w-full p-2 border border-slate-300 rounded-lg text-sm mb-3 font-semibold text-slate-900">
+        
+        <div class="space-y-2 text-xs">
+          <div class="p-2 bg-teal-50 text-teal-800 rounded-lg flex justify-between">
+            <span>All Big Angles:</span>
+            <strong id="bigAngleOut">110°</strong>
+          </div>
+          <div class="p-2 bg-amber-50 text-amber-800 rounded-lg flex justify-between">
+            <span>All Small Angles:</span>
+            <strong id="smallAngleOut">70°</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR AD SLOT 1 (300x250) -->
+      <div class="ad-slot w-full h-[250px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono p-4 text-center">
+        <span>[ ADVERTISEMENT SLOT ]</span>
+        <span class="text-slate-400 text-[11px] mt-1">300x250 Medium Rectangle</span>
+      </div>
+
+      <!-- SIDEBAR AD SLOT 2 (STICKY 300x600 or 300x250) -->
+      <div class="sticky top-24">
+        <div class="ad-slot w-full h-[300px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono p-4 text-center">
+          <span>[ ADVERTISEMENT SLOT ]</span>
+          <span class="text-slate-400 text-[11px] mt-1">Sticky Sidebar Banner</span>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <script>
+    function checkQuiz(btn, isCorrect, msg) {
+      const parent = btn.closest('.space-y-6 > div');
+      const feedback = parent.querySelector('.feedback');
+      feedback.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800', 'bg-rose-50', 'text-rose-800');
+      
+      if (isCorrect) {
+        feedback.classList.add('bg-emerald-50', 'text-emerald-800');
+        feedback.innerHTML = msg;
+      } else {
+        feedback.classList.add('bg-rose-50', 'text-rose-800');
+        feedback.innerHTML = msg;
+      }
+    }
+
+    function calculateTransversal() {
+      let val = parseFloat(document.getElementById('calcAngle').value) || 0;
+      val = Math.max(1, Math.min(179, val));
+      
+      let big, small;
+      if (val >= 90) {
+        big = val;
+        small = 180 - val;
+      } else {
+        small = val;
+        big = 180 - val;
+      }
+      
+      document.getElementById('bigAngleOut').innerText = big + '°';
+      document.getElementById('smallAngleOut').innerText = small + '°';
+    }
+  </script>
+
+</body>
+</html>

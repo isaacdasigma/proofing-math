@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 4: Right Triangles & Trigonometry | ProofingMath</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .ad-slot {
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      border: 2px dashed #cbd5e1;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- TOP AD BANNER (728x90 LEADERBOARD) -->
+  <div class="bg-white border-b border-slate-200 py-3 px-4">
+    <div class="max-w-6xl mx-auto flex justify-center">
+      <div class="ad-slot w-full max-w-[728px] h-[90px] rounded-lg flex flex-col items-center justify-center text-slate-400 text-xs font-mono">
+        <span>[ ADVERTISEMENT SLOT • 728x90 LEADERBOARD ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense / Sponsor Script Location</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-teal-500 text-white flex items-center justify-center font-black text-xl shadow-md shadow-teal-500/20">
+          P
+        </div>
+        <span class="font-extrabold text-xl tracking-tight text-slate-900">Proofing<span class="text-teal-600">Math</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 font-semibold text-sm">
+        <a href="geometry.html" class="text-teal-600 font-bold border-b-2 border-teal-500 pb-1">Geometry</a>
+        <a href="algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra I</a>
+        <a href="advanced-algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra II / Trig</a>
+        <a href="amdm.html" class="text-slate-600 hover:text-teal-600 transition">AMDM</a>
+      </nav>
+
+      <a href="geometry-cheat-sheet.html" class="bg-slate-900 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl hover:bg-teal-600 transition shadow-sm">
+        📄 Cheat Sheets
+      </a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB HERO HEADER -->
+  <div class="bg-slate-900 text-white py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-2 text-xs font-semibold text-teal-400 uppercase tracking-wider mb-2">
+        <a href="geometry.html" class="hover:underline">Geometry</a>
+        <span>&rsaquo;</span>
+        <span>Unit 4</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Unit 4: Right Triangles & Trigonometry</h1>
+      <p class="text-slate-300 mt-2 max-w-2xl text-sm sm:text-base">
+        Master the Pythagorean Theorem, conquer SOH CAH TOA, unlock 30°-60°-90° and 45°-45°-90° shortcuts, and solve missing sides or angles in seconds.
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN LESSON & SIDEBAR LAYOUT -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+    <!-- LEFT COLUMN: LESSON CONTENT (8 Cols) -->
+    <article class="lg:col-span-8 space-y-8">
+
+      <!-- SECTION 1: PYTHAGOREAN THEOREM & TRIPLES -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full mb-3">
+          Foundational Rule
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-3">1. Pythagorean Theorem & Common Triples</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+          For any right triangle with legs <strong>a</strong> and <strong>b</strong> and hypotenuse <strong>c</strong> (the longest side across from the 90° angle):
+        </p>
+
+        <!-- FORMULA BANNER -->
+        <div class="p-4 bg-slate-900 text-white rounded-xl text-center mb-6">
+          <span class="text-xs font-bold text-teal-400 uppercase tracking-widest block mb-1">The Core Formula</span>
+          <div class="text-2xl sm:text-3xl font-black font-mono text-white">a² + b² = c²</div>
+          <p class="text-[11px] text-slate-400 mt-1">Leg² + Leg² = Hypotenuse²</p>
+        </div>
+
+        <h3 class="font-bold text-slate-900 text-base mb-2">⚡ Common Pythagorean Triples (Save Time on Exams!)</h3>
+        <p class="text-slate-600 text-xs mb-4">
+          Whole number side lengths that satisfy <strong>a² + b² = c²</strong>. Recognizing these allows you to solve test questions instantly without writing calculations!
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl text-center">
+            <div class="text-base font-black text-teal-900">3 - 4 - 5</div>
+            <div class="text-[10px] text-teal-700 font-medium mt-1">Multiples: 6-8-10, 9-12-15</div>
+          </div>
+          <div class="p-3 bg-teal-50/60 border border-teal-200 rounded-xl text-center">
+            <div class="text-base font-black text-teal-900">5 - 12 - 13</div>
+            <div class="text-[10px] text-teal-700 font-medium mt-1">Multiples: 10-24-26</div>
+          </div>
+          <div class="p-3 bg-indigo-50/60 border border-indigo-200 rounded-xl text-center">
+            <div class="text-base font-black text-indigo-900">8 - 15 - 17</div>
+            <div class="text-[10px] text-indigo-700 font-medium mt-1">Multiples: 16-30-34</div>
+          </div>
+          <div class="p-3 bg-indigo-50/60 border border-indigo-200 rounded-xl text-center">
+            <div class="text-base font-black text-indigo-900">7 - 24 - 25</div>
+            <div class="text-[10px] text-indigo-700 font-medium mt-1">Multiples: 14-48-50</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MID-LESSON AD BANNER -->
+      <div class="ad-slot w-full h-[120px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono my-6">
+        <span>[ ADVERTISEMENT SLOT • IN-LESSON BANNER ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense Auto-Ad Location</span>
+      </div>
+
+      <!-- SECTION 2: SOH CAH TOA BREAKDOWN -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full mb-3">
+          Right Triangle Ratios
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-3">2. SOH CAH TOA Breakdown</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          Trigonometric ratios relate the acute angle <strong>θ (theta)</strong> of a right triangle to its side lengths. Label your triangle relative to <strong>θ</strong> first:
+        </p>
+
+        <!-- SOH CAH TOA CARDS -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+
+          <!-- SOH -->
+          <div class="p-5 rounded-xl border border-teal-200 bg-teal-50/40">
+            <div class="text-xs font-extrabold text-teal-700 uppercase mb-1">S O H</div>
+            <h3 class="text-xl font-black text-teal-900 mb-2">Sine (sin)</h3>
+            <div class="p-2.5 bg-white rounded-lg border border-teal-200 font-mono text-xs font-bold text-teal-950 text-center">
+              sin(θ) = Opp / Hyp
+            </div>
+            <p class="text-xs text-slate-600 mt-2">Opposite side divided by Hypotenuse.</p>
+          </div>
+
+          <!-- CAH -->
+          <div class="p-5 rounded-xl border border-indigo-200 bg-indigo-50/40">
+            <div class="text-xs font-extrabold text-indigo-700 uppercase mb-1">C A H</div>
+            <h3 class="text-xl font-black text-indigo-900 mb-2">Cosine (cos)</h3>
+            <div class="p-2.5 bg-white rounded-lg border border-indigo-200 font-mono text-xs font-bold text-indigo-950 text-center">
+              cos(θ) = Adj / Hyp
+            </div>
+            <p class="text-xs text-slate-600 mt-2">Adjacent side divided by Hypotenuse.</p>
+          </div>
+
+          <!-- TOA -->
+          <div class="p-5 rounded-xl border border-emerald-200 bg-emerald-50/40">
+            <div class="text-xs font-extrabold text-emerald-700 uppercase mb-1">T O A</div>
+            <h3 class="text-xl font-black text-emerald-900 mb-2">Tangent (tan)</h3>
+            <div class="p-2.5 bg-white rounded-lg border border-emerald-200 font-mono text-xs font-bold text-emerald-950 text-center">
+              tan(θ) = Opp / Adj
+            </div>
+            <p class="text-xs text-slate-600 mt-2">Opposite side divided by Adjacent side.</p>
+          </div>
+
+        </div>
+
+        <!-- WORKFLOW STEPS -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+          <h4 class="font-bold text-slate-900 text-sm">📍 How to Solve Any Trig Problem in 4 Steps:</h4>
+          <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1.5 font-medium">
+            <li><strong class="text-slate-900">Identify Reference Angle (θ):</strong> Circle the given or target acute angle.</li>
+            <li><strong class="text-slate-900">Label Sides:</strong> Hypotenuse (across 90°), Opposite (across θ), Adjacent (next to θ).</li>
+            <li><strong class="text-slate-900">Pick SOH, CAH, or TOA:</strong> Choose the ratio containing your known and unknown values.</li>
+            <li><strong class="text-slate-900">Solve Equation:</strong> Use inverse trig (sin⁻¹, cos⁻¹, tan⁻¹) when finding a missing angle!</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SECTION 3: SPECIAL RIGHT TRIANGLES -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="inline-block px-3 py-1 bg-amber-50 text-amber-800 text-xs font-bold rounded-full mb-3">
+          Exact Radical Rules
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-3">3. Special Right Triangles</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          These two special right triangles appear constantly on the SAT, ACT, and geometry final exams. Memorize their exact side ratio patterns:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+          <!-- 45-45-90 -->
+          <div class="p-5 border-2 border-teal-200 bg-teal-50/30 rounded-2xl relative">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-extrabold text-teal-950 text-lg">45° - 45° - 90° Triangle</h3>
+              <span class="text-xs bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded">Isosceles Right</span>
+            </div>
+            
+            <p class="text-xs text-slate-700 mb-4">Both legs are equal in length, and the hypotenuse is <strong>leg × √2</strong>.</p>
+            
+            <div class="p-3 bg-white border border-teal-200 rounded-xl font-mono text-xs text-teal-900 space-y-1">
+              <div>Leg 1 = <strong>x</strong></div>
+              <div>Leg 2 = <strong>x</strong></div>
+              <div>Hypotenuse = <strong>x√2</strong></div>
+            </div>
+
+            <div class="mt-3 text-[11px] text-teal-800 font-semibold">
+              💡 Example: If leg = 5, hypotenuse = <strong>5√2</strong>. If hypotenuse = 10, leg = 10 / √2 = <strong>5√2</strong>.
+            </div>
+          </div>
+
+          <!-- 30-60-90 -->
+          <div class="p-5 border-2 border-indigo-200 bg-indigo-50/30 rounded-2xl relative">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-extrabold text-indigo-950 text-lg">30° - 60° - 90° Triangle</h3>
+              <span class="text-xs bg-indigo-100 text-indigo-800 font-bold px-2 py-0.5 rounded">Scalene Right</span>
+            </div>
+            
+            <p class="text-xs text-slate-700 mb-4">Everything builds from the <strong>Short Leg (x)</strong> across from the 30° angle.</p>
+            
+            <div class="p-3 bg-white border border-indigo-200 rounded-xl font-mono text-xs text-indigo-900 space-y-1">
+              <div>Short Leg (opp 30°) = <strong>x</strong></div>
+              <div>Long Leg (opp 60°) = <strong>x√3</strong></div>
+              <div>Hypotenuse (opp 90°) = <strong>2x</strong></div>
+            </div>
+
+            <div class="mt-3 text-[11px] text-indigo-800 font-semibold">
+              💡 Example: If short leg = 4, long leg = <strong>4√3</strong>, and hypotenuse = <strong>8</strong>.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 4: INTERACTIVE CALCULATOR WIDGET -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-2xl font-bold text-slate-900">4. Interactive Right Triangle Calculator</h2>
+          <span class="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full">Interactive Lab</span>
+        </div>
+        <p class="text-xs text-slate-500 mb-6">
+          Switch between <strong>SOH CAH TOA</strong> and <strong>Special Right Triangles</strong> to calculate missing sides or angles instantly!
+        </p>
+
+        <!-- MODE TOGGLE BUTTONS -->
+        <div class="flex gap-2 mb-6">
+          <button id="modeTrigBtn" onclick="setCalcMode('trig')" class="flex-1 py-2.5 px-4 rounded-xl text-xs font-bold transition bg-teal-600 text-white shadow-sm">
+            📐 SOH CAH TOA Solver
+          </button>
+          <button id="modeSpecialBtn" onclick="setCalcMode('special')" class="flex-1 py-2.5 px-4 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-700 hover:bg-slate-200">
+            ⚡ Special Right △ Solver
+          </button>
+        </div>
+
+        <!-- MODE 1: SOH CAH TOA -->
+        <div id="trigCalcPanel" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Angle θ (°)</label>
+              <input type="number" id="trigAngle" value="30" min="1" max="89" oninput="solveTrig()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Known Side</label>
+              <select id="trigKnownSide" onchange="solveTrig()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 outline-none">
+                <option value="opp">Opposite Side</option>
+                <option value="adj">Adjacent Side</option>
+                <option value="hyp" selected>Hypotenuse</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Side Length</label>
+              <input type="number" id="trigSideVal" value="10" min="0.1" step="any" oninput="solveTrig()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 outline-none">
+            </div>
+          </div>
+        </div>
+
+        <!-- MODE 2: SPECIAL RIGHT TRIANGLE -->
+        <div id="specialCalcPanel" class="hidden space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Triangle Type</label>
+              <select id="specialType" onchange="solveSpecial()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 outline-none">
+                <option value="45-45-90">45° - 45° - 90°</option>
+                <option value="30-60-90">30° - 60° - 90°</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Given Part</label>
+              <select id="specialGivenPart" onchange="solveSpecial()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 outline-none">
+                <!-- Populated dynamically via JS -->
+              </select>
+            </div>
+            <div>
+              <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Value (x)</label>
+              <input type="number" id="specialValue" value="6" min="0.1" step="any" oninput="solveSpecial()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 outline-none">
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS DISPLAY -->
+        <div class="mt-6 p-6 bg-slate-900 text-white rounded-2xl">
+          <div class="text-[10px] font-extrabold uppercase tracking-wider text-teal-400 mb-1" id="calcResultTag">Calculated Output</div>
+          <div id="calcResultGrid" class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs">
+            <!-- Dynamic calculation outputs -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: QUIZ -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-slate-900">5. Unit 4 Quiz</h2>
+          <span class="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full" id="quizScore">Score: 0 / 5</span>
+        </div>
+
+        <div class="space-y-6">
+
+          <!-- Q1 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q1: A right triangle has legs of length a = 5 and b = 12. What is the length of hypotenuse c?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, true, 'Spot on! This is the famous 5-12-13 Pythagorean triple! (5² + 12² = 25 + 144 = 169 = 13²)')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) 13</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. Remember to take the square root of a² + b².')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) 17</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. 169 is c², take the square root to get c!')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) 169</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q2: In SOH CAH TOA, what trigonometric ratio represents Tangent (tan)?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, false, 'Incorrect. Opposite / Hypotenuse is Sine (SOH).')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) Opposite / Hypotenuse</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. Adjacent / Hypotenuse is Cosine (CAH).')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) Adjacent / Hypotenuse</button>
+              <button onclick="checkQuiz(this, true, 'Bingo! TOA stands for Tangent = Opposite / Adjacent.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) Opposite / Adjacent</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q3: In a 45°-45°-90° triangle, if one leg measures 7, what is the exact length of the hypotenuse?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, true, 'Awesome! In a 45°-45°-90° triangle, hypotenuse = leg × √2 = 7√2.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) 7√2</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. 7√3 is used in 30°-60°-90° triangles for the long leg.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) 7√3</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. 14 is 2 × 7, which would be the hypotenuse in a 30°-60°-90° triangle.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) 14</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q4: In a 30°-60°-90° triangle, if the short leg (across from 30°) is 4, what are the lengths of the long leg and hypotenuse?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, true, 'Correct! Long leg = short leg × √3 = 4√3, and Hypotenuse = 2 × short leg = 8.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) Long leg = 4√3, Hypotenuse = 8</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. Remember hypotenuse is double the short leg (2x = 8).')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) Long leg = 8, Hypotenuse = 4√3</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. 4√2 is for 45°-45°-90° triangles.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) Long leg = 4√2, Hypotenuse = 12</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q5: In a right triangle, the opposite side to angle θ is 3 and the hypotenuse is 6. What is angle θ?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, true, 'Bingo! sin(θ) = 3/6 = 0.5. Taking inverse sine: sin⁻¹(0.5) = 30°.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) 30°</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. sin(45°) = √2/2 ≈ 0.707.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) 45°</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. sin(60°) = √3/2 ≈ 0.866.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) 60°</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BOTTOM NAVIGATION LINKS -->
+      <div class="flex items-center justify-between pt-4">
+        <a href="geometry-unit3-triangles.html" class="text-sm font-bold text-slate-600 hover:text-slate-900">&larr; Unit 3: Triangles & Congruence</a>
+        <a href="geometry-unit5-polygons.html" class="bg-teal-600 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-teal-700 shadow-md">Next: Unit 5 (Polygons & Quadrilaterals) &rarr;</a>
+      </div>
+
+    </article>
+
+    <!-- RIGHT COLUMN: SIDEBAR ADS & QUICK TOOLS (4 Cols) -->
+    <aside class="lg:col-span-4 space-y-6">
+
+      <!-- QUICK TRIG SOLVER WIDGET -->
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-lg">🧮</span>
+          <h3 class="font-bold text-slate-900 text-sm">Pythagorean Solver</h3>
+        </div>
+        <p class="text-xs text-slate-500 mb-4">Enter legs a and b to find hypotenuse c:</p>
+
+        <div class="space-y-3">
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Leg a</label>
+            <input type="number" id="sideA" value="3" min="0.1" step="any" oninput="solvePythagoras()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Leg b</label>
+            <input type="number" id="sideB" value="4" min="0.1" step="any" oninput="solvePythagoras()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+        </div>
+
+        <div id="pythagResultBox" class="mt-4 p-4 bg-teal-50 border border-teal-200 rounded-xl text-center">
+          <div class="text-[10px] font-extrabold uppercase tracking-wider text-teal-800">Hypotenuse c</div>
+          <div id="hypotenuseVal" class="text-3xl font-black text-teal-900 my-1">5</div>
+          <div id="tripleBadge" class="inline-block px-2.5 py-0.5 bg-teal-200 text-teal-900 text-[10px] font-bold rounded-full">
+            Exact 3-4-5 Triple!
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR AD SLOT (300x250) -->
+      <div class="ad-slot w-full h-[250px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono p-4 text-center">
+        <span>[ ADVERTISEMENT SLOT ]</span>
+        <span class="text-slate-400 text-[11px] mt-1">300x250 Medium Rectangle</span>
+      </div>
+
+      <!-- STICKY CHEAT RECAP CARD -->
+      <div class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white p-5 rounded-2xl shadow-md sticky top-20">
+        <h4 class="font-extrabold text-sm mb-2 text-teal-400">⚡ Unit 4 Quick Recap</h4>
+        <ul class="text-xs space-y-2 text-slate-200">
+          <li class="flex items-start gap-1.5"><span class="text-teal-400 font-bold">📐</span> <span><strong>Pythagoras:</strong> a² + b² = c²</span></li>
+          <li class="flex items-start gap-1.5"><span class="text-emerald-400 font-bold">sin</span> <span><strong>SOH:</strong> sin(θ) = Opp / Hyp</span></li>
+          <li class="flex items-start gap-1.5"><span class="text-indigo-400 font-bold">cos</span> <span><strong>CAH:</strong> cos(θ) = Adj / Hyp</span></li>
+          <li class="flex items-start gap-1.5"><span class="text-amber-400 font-bold">tan</span> <span><strong>TOA:</strong> tan(θ) = Opp / Adj</span></li>
+          <li class="flex items-start gap-1.5"><span class="text-rose-400 font-bold">45°</span> <span><strong>45-45-90:</strong> x, x, x√2</span></li>
+          <li class="flex items-start gap-1.5"><span class="text-purple-400 font-bold">30°</span> <span><strong>30-60-90:</strong> x, x√3, 2x</span></li>
+        </ul>
+        <a href="geometry-cheat-sheet.html" class="block text-center mt-4 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs py-2 rounded-lg transition">
+          Open Full Cheat Sheet &rarr;
+        </a>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <script>
+    let score = 0;
+    let answeredQuestions = new Set();
+    let currentCalcMode = 'trig';
+
+    // CALCULATOR MODE TOGGLE
+    function setCalcMode(mode) {
+      currentCalcMode = mode;
+      const trigBtn = document.getElementById('modeTrigBtn');
+      const specialBtn = document.getElementById('modeSpecialBtn');
+      const trigPanel = document.getElementById('trigCalcPanel');
+      const specialPanel = document.getElementById('specialCalcPanel');
+
+      if (mode === 'trig') {
+        trigBtn.className = 'flex-1 py-2.5 px-4 rounded-xl text-xs font-bold transition bg-teal-600 text-white shadow-sm';
+        specialBtn.className = 'flex-1 py-2.5 px-4 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-700 hover:bg-slate-200';
+        trigPanel.classList.remove('hidden');
+        specialPanel.classList.add('hidden');
+        solveTrig();
+      } else {
+        specialBtn.className = 'flex-1 py-2.5 px-4 rounded-xl text-xs font-bold transition bg-teal-600 text-white shadow-sm';
+        trigBtn.className = 'flex-1 py-2.5 px-4 rounded-xl text-xs font-bold transition bg-slate-100 text-slate-700 hover:bg-slate-200';
+        specialPanel.classList.remove('hidden');
+        trigPanel.classList.add('hidden');
+        updateSpecialOptions();
+        solveSpecial();
+      }
+    }
+
+    // SOH CAH TOA SOLVER
+    function solveTrig() {
+      const deg = parseFloat(document.getElementById('trigAngle').value) || 30;
+      const known = document.getElementById('trigKnownSide').value;
+      const val = parseFloat(document.getElementById('trigSideVal').value) || 10;
+      const rad = deg * (Math.PI / 180);
+
+      let opp, adj, hyp;
+
+      if (known === 'opp') {
+        opp = val;
+        hyp = opp / Math.sin(rad);
+        adj = opp / Math.tan(rad);
+      } else if (known === 'adj') {
+        adj = val;
+        hyp = adj / Math.cos(rad);
+        opp = adj * Math.tan(rad);
+      } else { // hyp
+        hyp = val;
+        opp = hyp * Math.sin(rad);
+        adj = hyp * Math.cos(rad);
+      }
+
+      document.getElementById('calcResultTag').innerText = `SOH CAH TOA Output (θ = ${deg}°)`;
+      document.getElementById('calcResultGrid').innerHTML = `
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+          <div class="text-teal-400 font-bold mb-1">Opposite Side</div>
+          <div class="text-lg text-white font-extrabold">${opp.toFixed(3)}</div>
+          <div class="text-[10px] text-slate-400 mt-1">sin(${deg}°) = ${Math.sin(rad).toFixed(4)}</div>
+        </div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+          <div class="text-indigo-400 font-bold mb-1">Adjacent Side</div>
+          <div class="text-lg text-white font-extrabold">${adj.toFixed(3)}</div>
+          <div class="text-[10px] text-slate-400 mt-1">cos(${deg}°) = ${Math.cos(rad).toFixed(4)}</div>
+        </div>
+        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+          <div class="text-amber-400 font-bold mb-1">Hypotenuse</div>
+          <div class="text-lg text-white font-extrabold">${hyp.toFixed(3)}</div>
+          <div class="text-[10px] text-slate-400 mt-1">tan(${deg}°) = ${Math.tan(rad).toFixed(4)}</div>
+        </div>
+      `;
+    }
+
+    // DYNAMIC OPTIONS FOR SPECIAL RIGHT TRIANGLES
+    function updateSpecialOptions() {
+      const type = document.getElementById('specialType').value;
+      const select = document.getElementById('specialGivenPart');
+      if (type === '45-45-90') {
+        select.innerHTML = `
+          <option value="leg">Leg (x)</option>
+          <option value="hyp">Hypotenuse (x√2)</option>
+        `;
+      } else {
+        select.innerHTML = `
+          <option value="short">Short Leg (x opp 30°)</option>
+          <option value="long">Long Leg (x√3 opp 60°)</option>
+          <option value="hyp">Hypotenuse (2x)</option>
+        `;
+      }
+    }
+
+    // SPECIAL RIGHT TRIANGLE SOLVER
+    function solveSpecial() {
+      const type = document.getElementById('specialType').value;
+      const part = document.getElementById('specialGivenPart').value;
+      const val = parseFloat(document.getElementById('specialValue').value) || 6;
+
+      document.getElementById('calcResultTag').innerText = `Special Right Triangle Output (${type})`;
+
+      if (type === '45-45-90') {
+        let leg, hyp, legRad, hypRad;
+        if (part === 'leg') {
+          leg = val;
+          hyp = val * Math.SQRT2;
+          legRad = `${val}`;
+          hypRad = `${val}√2`;
+        } else { // hyp
+          hyp = val;
+          leg = val / Math.SQRT2;
+          legRad = `(${val}/2)√2`;
+          hypRad = `${val}`;
+        }
+
+        document.getElementById('calcResultGrid').innerHTML = `
+          <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+            <div class="text-teal-400 font-bold mb-1">Leg 1 (x)</div>
+            <div class="text-lg text-white font-extrabold">${leg.toFixed(3)}</div>
+            <div class="text-[10px] text-slate-400 mt-1">Exact: ${legRad}</div>
+          </div>
+          <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+            <div class="text-teal-400 font-bold mb-1">Leg 2 (x)</div>
+            <div class="text-lg text-white font-extrabold">${leg.toFixed(3)}</div>
+            <div class="text-[10px] text-slate-400 mt-1">Exact: ${legRad}</div>
+          </div>
+          <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+            <div class="text-amber-400 font-bold mb-1">Hypotenuse (x√2)</div>
+            <div class="text-lg text-white font-extrabold">${hyp.toFixed(3)}</div>
+            <div class="text-[10px] text-slate-400 mt-1">Exact: ${hypRad}</div>
+          </div>
+        `;
+      } else { // 30-60-90
+        let shortL, longL, hyp, shortRad, longRad, hypRad;
+        if (part === 'short') {
+          shortL = val;
+          longL = val * Math.sqrt(3);
+          hyp = val * 2;
+          shortRad = `${val}`;
+          longRad = `${val}√3`;
+          hypRad = `${val * 2}`;
+        } else if (part === 'long') {
+          longL = val;
+          shortL = val / Math.sqrt(3);
+          hyp = shortL * 2;
+          shortRad = `(${val}/3)√3`;
+          longRad = `${val}`;
+          hypRad = `(2×${val}/3)√3`;
+        } else { // hyp
+          hyp = val;
+          shortL = val / 2;
+          longL = shortL * Math.sqrt(3);
+          shortRad = `${val / 2}`;
+          longRad = `(${val / 2})√3`;
+          hypRad = `${val}`;
+        }
+
+        document.getElementById('calcResultGrid').innerHTML = `
+          <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+            <div class="text-teal-400 font-bold mb-1">Short Leg (x)</div>
+            <div class="text-lg text-white font-extrabold">${shortL.toFixed(3)}</div>
+            <div class="text-[10px] text-slate-400 mt-1">Exact: ${shortRad}</div>
+          </div>
+          <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+            <div class="text-indigo-400 font-bold mb-1">Long Leg (x√3)</div>
+            <div class="text-lg text-white font-extrabold">${longL.toFixed(3)}</div>
+            <div class="text-[10px] text-slate-400 mt-1">Exact: ${longRad}</div>
+          </div>
+          <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+            <div class="text-amber-400 font-bold mb-1">Hypotenuse (2x)</div>
+            <div class="text-lg text-white font-extrabold">${hyp.toFixed(3)}</div>
+            <div class="text-[10px] text-slate-400 mt-1">Exact: ${hypRad}</div>
+          </div>
+        `;
+      }
+    }
+
+    // SIDEBAR PYTHAGOREAN SOLVER
+    function solvePythagoras() {
+      const a = parseFloat(document.getElementById('sideA').value) || 0;
+      const b = parseFloat(document.getElementById('sideB').value) || 0;
+      const hypValDisplay = document.getElementById('hypotenuseVal');
+      const badge = document.getElementById('tripleBadge');
+
+      if (a <= 0 || b <= 0) {
+        hypValDisplay.innerText = 'Invalid';
+        badge.innerText = 'Legs must be > 0';
+        badge.className = 'inline-block px-2.5 py-0.5 bg-rose-200 text-rose-900 text-[10px] font-bold rounded-full';
+        return;
+      }
+
+      const c = Math.sqrt(a * a + b * b);
+      hypValDisplay.innerText = Number.isInteger(c) ? c : c.toFixed(2);
+
+      // Check if common triple
+      const sides = [a, b, c].sort((x, y) => x - y);
+      const isTriple = Number.isInteger(c);
+
+      if (isTriple) {
+        badge.innerText = `Exact Pythagorean Triple! (${sides.join('-')})`;
+        badge.className = 'inline-block px-2.5 py-0.5 bg-emerald-200 text-emerald-900 text-[10px] font-bold rounded-full';
+      } else {
+        badge.innerText = 'Irrational / Radical Side Length';
+        badge.className = 'inline-block px-2.5 py-0.5 bg-slate-200 text-slate-700 text-[10px] font-bold rounded-full';
+      }
+    }
+
+    // QUIZ SCRIPT
+    function checkQuiz(btn, isCorrect, msg) {
+      const parent = btn.closest('.space-y-6 > div');
+      const feedback = parent.querySelector('.feedback');
+      feedback.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800', 'bg-rose-50', 'text-rose-800');
+      
+      if (isCorrect) {
+        feedback.classList.add('bg-emerald-50', 'text-emerald-800');
+        feedback.innerText = msg;
+        if (!answeredQuestions.has(parent)) {
+          score++;
+          answeredQuestions.add(parent);
+          document.getElementById('quizScore').innerText = `Score: ${score} / 5`;
+        }
+      } else {
+        feedback.classList.add('bg-rose-50', 'text-rose-800');
+        feedback.innerText = msg;
+      }
+    }
+
+    // INITIALIZE ON LOAD
+    window.onload = function() {
+      solveTrig();
+      solvePythagoras();
+    };
+  </script>
+
+</body>
+</html>

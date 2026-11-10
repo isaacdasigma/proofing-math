@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 2: Two-Column Proofs | Proofing Math</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .ad-slot {
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      border: 2px dashed #cbd5e1;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- TOP AD BANNER (728x90) -->
+  <div class="bg-white border-b border-slate-200 py-3 px-4">
+    <div class="max-w-6xl mx-auto flex justify-center">
+      <div class="ad-slot w-full max-w-[728px] h-[90px] rounded-lg flex flex-col items-center justify-center text-slate-400 text-xs font-mono">
+        <span>[ ADVERTISEMENT SLOT • 728x90 LEADERBOARD ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense / Sponsor Script Location</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-teal-500 text-white flex items-center justify-center font-black text-xl shadow-md shadow-teal-500/20">
+          P
+        </div>
+        <span class="font-extrabold text-xl tracking-tight text-slate-900">Proofing<span class="text-teal-600">Math</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 font-semibold text-sm">
+        <a href="geometry.html" class="text-teal-600 font-bold border-b-2 border-teal-500 pb-1">Geometry</a>
+        <a href="algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra I</a>
+        <a href="advanced-algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra II / Trig</a>
+        <a href="amdm.html" class="text-slate-600 hover:text-teal-600 transition">AMDM</a>
+      </nav>
+
+      <a href="geometry-cheat-sheet.html" class="bg-slate-900 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl hover:bg-teal-600 transition shadow-sm">
+        📄 Cheat Sheets
+      </a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB HEADER -->
+  <div class="bg-slate-900 text-white py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-2 text-xs font-semibold text-teal-400 uppercase tracking-wider mb-2">
+        <a href="geometry.html" class="hover:underline">Geometry</a>
+        <span>&rsaquo;</span>
+        <span>Unit 2</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Unit 2: Two-Column Proofs Without Panic</h1>
+      <p class="text-slate-300 mt-2 max-w-2xl text-sm sm:text-base">
+        Master two-column proofs like a detective mystery: Statements are your clues, Reasons are your rules of law.
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN LESSON & SIDEBAR LAYOUT -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- LEFT COLUMN: LESSON CONTENT (8 Cols) -->
+    <article class="lg:col-span-8 space-y-8">
+
+      <!-- SECTION 1: DETECTIVE SYSTEM -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full mb-3">
+          Mental Model
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">1. The "Detective Mystery" System</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Two-column proofs scare high schoolers because teachers grade them so strictly. But every single proof follows the exact same 3-step pattern:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+            <div class="text-xs font-bold text-teal-600 uppercase mb-1">Step 1</div>
+            <div class="font-bold text-slate-900 text-base mb-1">The "Given" Clues</div>
+            <p class="text-xs text-slate-600">Always write down what the problem gives you first. Free points on every test!</p>
+          </div>
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+            <div class="text-xs font-bold text-indigo-600 uppercase mb-1">Step 2</div>
+            <div class="font-bold text-slate-900 text-base mb-1">The Hidden Links</div>
+            <p class="text-xs text-slate-600">Look for shared sides (Reflexive) or vertical X-angles to create new true facts.</p>
+          </div>
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+            <div class="text-xs font-bold text-emerald-600 uppercase mb-1">Step 3</div>
+            <div class="font-bold text-slate-900 text-base mb-1">The Final Verdict</div>
+            <p class="text-xs text-slate-600">Finish with the "Prove" line using SSS, SAS, ASA, AAS, HL, or CPCTC.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MID-LESSON AD BANNER -->
+      <div class="ad-slot w-full h-[120px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono my-6">
+        <span>[ ADVERTISEMENT SLOT • IN-LESSON BANNER ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense Auto-Ad Location</span>
+      </div>
+
+      <!-- SECTION 2: TOP PROOF REASONS TABLE -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">2. The "Top 6" Reasons Used in 90% of Proofs</h2>
+        <p class="text-slate-600 text-sm mb-4">Memorize these 6 rules, and you will be able to solve almost any high school geometry proof:</p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm text-slate-700 border-collapse">
+            <thead>
+              <tr class="bg-slate-100 border-b border-slate-200 font-bold text-slate-900">
+                <th class="p-3">Reason Name</th>
+                <th class="p-3">When to Use It</th>
+                <th class="p-3">Example Statement</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 font-mono">
+              <tr>
+                <td class="p-3 font-bold text-indigo-700">Reflexive Property</td>
+                <td class="p-3 font-sans">Two triangles share the exact same side line.</td>
+                <td class="p-3 font-semibold text-slate-900">AC ≅ AC</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-indigo-700">Vertical Angles Thm</td>
+                <td class="p-3 font-sans">Two straight lines cross making an X shape.</td>
+                <td class="p-3 font-semibold text-slate-900">∠1 ≅ ∠2</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-indigo-700">Def. of Midpoint</td>
+                <td class="p-3 font-sans">Given says "M is the midpoint of AB".</td>
+                <td class="p-3 font-semibold text-slate-900">AM ≅ MB</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-indigo-700">Def. of Angle Bisector</td>
+                <td class="p-3 font-sans">Given says "BD bisects ∠ABC".</td>
+                <td class="p-3 font-semibold text-slate-900">∠ABD ≅ ∠DBC</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-indigo-700">Alternate Interior Angles</td>
+                <td class="p-3 font-sans">Given mentions parallel lines (AB ∥ CD).</td>
+                <td class="p-3 font-semibold text-slate-900">∠BAC ≅ ∠DCA</td>
+              </tr>
+              <tr class="bg-teal-50/50">
+                <td class="p-3 font-bold text-teal-800">CPCTC</td>
+                <td class="p-3 font-sans text-teal-900">AFTER you proved △ABC ≅ △CDA to prove leftover sides/angles equal.</td>
+                <td class="p-3 font-semibold text-slate-900">BC ≅ DA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 3: INTERACTIVE PROOF BUILDER -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-2xl font-bold text-slate-900">3. Interactive Proof Practice</h2>
+          <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Interactive Tool</span>
+        </div>
+
+        <div class="p-4 bg-indigo-50/60 border border-indigo-100 rounded-xl mb-6 text-sm">
+          <p class="font-bold text-indigo-950 mb-1">Scenario:</p>
+          <p class="text-indigo-900">
+            <strong>Given:</strong> AB ∥ CD and AB ≅ CD.<br>
+            <strong>Prove:</strong> △ABC ≅ △CDA
+          </p>
+        </div>
+
+        <!-- TWO-COLUMN PROOF TABLE BUILDER -->
+        <div class="space-y-4">
+          <div class="grid grid-cols-12 gap-2 bg-slate-900 text-white p-3 rounded-lg text-xs font-bold uppercase tracking-wider">
+            <div class="col-span-6">Statements</div>
+            <div class="col-span-6">Reasons</div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="grid grid-cols-12 gap-2 items-center p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs font-mono">
+            <div class="col-span-6 font-bold text-slate-800">1. AB ∥ CD and AB ≅ CD</div>
+            <div class="col-span-6 text-slate-600">1. Given</div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="grid grid-cols-12 gap-2 items-center p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs">
+            <div class="col-span-6 font-mono font-bold text-slate-800">2. ∠BAC ≅ ∠DCA</div>
+            <div class="col-span-6">
+              <select id="step2Reason" class="w-full p-2 border border-slate-300 rounded-md text-xs bg-white font-medium">
+                <option value="">[ Select Reason... ]</option>
+                <option value="correct">Alternate Interior Angles Theorem</option>
+                <option value="wrong1">Reflexive Property</option>
+                <option value="wrong2">Definition of Midpoint</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="grid grid-cols-12 gap-2 items-center p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs">
+            <div class="col-span-6">
+              <select id="step3Statement" class="w-full p-2 border border-slate-300 rounded-md text-xs bg-white font-medium">
+                <option value="">[ Select Statement... ]</option>
+                <option value="correct">AC ≅ AC</option>
+                <option value="wrong1">AB ≅ BC</option>
+                <option value="wrong2">∠B ≅ ∠D</option>
+              </select>
+            </div>
+            <div class="col-span-6 font-mono text-slate-600">3. Reflexive Property</div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="grid grid-cols-12 gap-2 items-center p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs">
+            <div class="col-span-6 font-mono font-bold text-slate-800">4. △ABC ≅ △CDA</div>
+            <div class="col-span-6">
+              <select id="step4Reason" class="w-full p-2 border border-slate-300 rounded-md text-xs bg-white font-medium">
+                <option value="">[ Select Reason... ]</option>
+                <option value="correct">SAS Congruence Postulate</option>
+                <option value="wrong1">SSS Congruence Postulate</option>
+                <option value="wrong2">CPCTC</option>
+              </select>
+            </div>
+          </div>
+
+          <button onclick="checkProofBuilder()" class="w-full bg-indigo-600 text-white font-bold text-sm py-3 rounded-xl hover:bg-indigo-700 transition shadow-md mt-2">
+            Check Proof Solution
+          </button>
+
+          <div id="proofFeedback" class="hidden p-4 rounded-xl text-xs font-semibold text-center mt-3"></div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: QUIZ -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-slate-900">4. Unit 2 Quiz</h2>
+          <span class="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full" id="quizScore">Score: 0 / 5</span>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Q1 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q1: You need to show that a triangle's side is equal to itself in a proof (e.g. AC ≅ AC). Which property do you use?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, true, 'Correct! Anything equals itself by the Reflexive Property.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) Reflexive Property</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. Transitive property is: If A=B and B=C, then A=C.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) Transitive Property</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. Symmetric property is: If A=B, then B=A.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) Symmetric Property</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q2: What rule can ONLY be used AFTER you have already proven two triangles are congruent?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, true, 'Spot on! CPCTC can ONLY be used after triangles are proven ≅.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) CPCTC</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. SAS is used to prove the triangles congruent in the first place.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) SAS Postulate</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. Given information comes at the beginning of a proof.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) Given</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM NAVIGATION -->
+      <div class="flex items-center justify-between pt-4">
+        <a href="geometry-unit1-transversals.html" class="text-sm font-bold text-slate-600 hover:text-slate-900">&larr; Unit 1: Lines & Transversals</a>
+        <a href="geometry-unit3-triangles.html" class="bg-teal-600 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-teal-700 shadow-md">Next: Unit 3 (Triangles) &rarr;</a>
+      </div>
+
+    </article>
+
+    <!-- RIGHT COLUMN: SIDEBAR ADS & PROOF LOOKUP (4 Cols) -->
+    <aside class="lg:col-span-4 space-y-6">
+
+      <!-- PROOF REASON QUICK SEARCH WIDGET -->
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <h3 class="font-bold text-slate-900 text-sm mb-2">🔍 Proof Reason Lookup</h3>
+        <p class="text-xs text-slate-500 mb-3">Type any proof term to get instant plain English definitions:</p>
+        <input type="text" id="reasonSearch" onkeyup="searchProofReason()" placeholder="Search (e.g. bisector, reflexive)..." class="w-full p-2 border border-slate-300 rounded-lg text-xs mb-3 font-medium">
+        
+        <div id="reasonOutput" class="p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-700 min-h-[60px] flex items-center justify-center text-center">
+          Type a term above to see definition.
+        </div>
+      </div>
+
+      <!-- SIDEBAR AD SLOT (300x250) -->
+      <div class="ad-slot w-full h-[250px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono p-4 text-center">
+        <span>[ ADVERTISEMENT SLOT ]</span>
+        <span class="text-slate-400 text-[11px] mt-1">300x250 Medium Rectangle</span>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <script>
+    let score = 0;
+
+    function checkProofBuilder() {
+      const s2 = document.getElementById('step2Reason').value;
+      const s3 = document.getElementById('step3Statement').value;
+      const s4 = document.getElementById('step4Reason').value;
+      const fb = document.getElementById('proofFeedback');
+
+      fb.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800', 'bg-rose-50', 'text-rose-800');
+
+      if (s2 === 'correct' && s3 === 'correct' && s4 === 'correct') {
+        fb.classList.add('bg-emerald-50', 'text-emerald-800');
+        fb.innerText = '🎉 Perfect! You solved the two-column proof correctly!';
+      } else {
+        fb.classList.add('bg-rose-50', 'text-rose-800');
+        fb.innerText = '❌ Almost! Double check your selected Statements and Reasons and try again.';
+      }
+    }
+
+    function checkQuiz(btn, isCorrect, msg) {
+      const parent = btn.closest('.space-y-6 > div');
+      const feedback = parent.querySelector('.feedback');
+      feedback.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800', 'bg-rose-50', 'text-rose-800');
+      
+      if (isCorrect) {
+        feedback.classList.add('bg-emerald-50', 'text-emerald-800');
+        feedback.innerText = msg;
+        score++;
+        document.getElementById('quizScore').innerText = `Score: ${score} / 5`;
+      } else {
+        feedback.classList.add('bg-rose-50', 'text-rose-800');
+        feedback.innerText = msg;
+      }
+    }
+
+    function searchProofReason() {
+      const term = document.getElementById('reasonSearch').value.toLowerCase().trim();
+      const out = document.getElementById('reasonOutput');
+
+      const dict = {
+        'reflexive': 'Reflexive Property: Anything equals itself (AB ≅ AB). Used when triangles share a middle wall side.',
+        'transitive': 'Transitive Property: If A = B and B = C, then A = C.',
+        'cpctc': 'CPCTC: Corresponding Parts of Congruent Triangles are Congruent. Use AFTER proving triangles ≅.',
+        'bisector': 'Definition of Bisector: Cuts a segment or angle into two perfectly equal halves.',
+        'midpoint': 'Definition of Midpoint: The exact middle point of a segment, dividing it into two congruent halves (AM ≅ MB).'
+      };
+
+      if (!term) {
+        out.innerText = 'Type a term above to see definition.';
+        return;
+      }
+
+      let found = false;
+      for (let k in dict) {
+        if (k.includes(term) || term.includes(k)) {
+          out.innerText = dict[k];
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        out.innerText = 'No matching definition found. Try "bisector", "reflexive", "midpoint", or "cpctc".';
+      }
+    }
+  </script>
+
+</body>
+</html>

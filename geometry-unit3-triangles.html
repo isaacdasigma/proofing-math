@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 3: Triangles & Congruence | ProofingMath</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .ad-slot {
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      border: 2px dashed #cbd5e1;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- TOP AD BANNER (728x90) -->
+  <div class="bg-white border-b border-slate-200 py-3 px-4">
+    <div class="max-w-6xl mx-auto flex justify-center">
+      <div class="ad-slot w-full max-w-[728px] h-[90px] rounded-lg flex flex-col items-center justify-center text-slate-400 text-xs font-mono">
+        <span>[ ADVERTISEMENT SLOT • 728x90 LEADERBOARD ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense / Sponsor Script Location</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-teal-500 text-white flex items-center justify-center font-black text-xl shadow-md shadow-teal-500/20">
+          P
+        </div>
+        <span class="font-extrabold text-xl tracking-tight text-slate-900">Proofing<span class="text-teal-600">Math</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 font-semibold text-sm">
+        <a href="geometry.html" class="text-teal-600 font-bold border-b-2 border-teal-500 pb-1">Geometry</a>
+        <a href="algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra I</a>
+        <a href="advanced-algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra II / Trig</a>
+        <a href="amdm.html" class="text-slate-600 hover:text-teal-600 transition">AMDM</a>
+      </nav>
+
+      <a href="geometry-cheat-sheet.html" class="bg-slate-900 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl hover:bg-teal-600 transition shadow-sm">
+        📄 Cheat Sheets
+      </a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB HERO HEADER -->
+  <div class="bg-slate-900 text-white py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-2 text-xs font-semibold text-teal-400 uppercase tracking-wider mb-2">
+        <a href="geometry.html" class="hover:underline">Geometry</a>
+        <span>&rsaquo;</span>
+        <span>Unit 3</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Unit 3: Triangles & Congruence</h1>
+      <p class="text-slate-300 mt-2 max-w-2xl text-sm sm:text-base">
+        Master the 5 valid congruence shortcuts (SSS, SAS, ASA, AAS, HL), dodge the dangerous SSA and AAA traps, and conquer triangle angle theorems with confidence.
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN LESSON & SIDEBAR LAYOUT -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+    <!-- LEFT COLUMN: LESSON CONTENT (8 Cols) -->
+    <article class="lg:col-span-8 space-y-8">
+
+      <!-- SECTION 1: THE 5 VALID CONGRUENCE SHORTCUTS -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full mb-3">
+          Core Shortcuts
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">1. The 5 Valid Triangle Congruence Shortcuts</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+          To prove two triangles are identical in shape and size (<strong>△ABC ≅ △DEF</strong>), you do <em>not</em> need to measure all 3 sides and all 3 angles. You only need one of these 5 trusted rules:
+        </p>
+
+        <!-- CARDS GRID FOR THE 5 SHORTCUTS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+          <!-- SSS -->
+          <div class="p-4 rounded-xl border border-teal-200 bg-teal-50/40 relative">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg font-black text-teal-800">SSS</span>
+              <span class="text-xs bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-bold">Side-Side-Side</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              All 3 corresponding pairs of sides are equal in length.
+            </p>
+            <div class="mt-3 p-2 bg-white rounded-lg border border-teal-100 font-mono text-[11px] text-teal-900">
+              AB ≅ DE, BC ≅ EF, AC ≅ DF
+            </div>
+          </div>
+
+          <!-- SAS -->
+          <div class="p-4 rounded-xl border border-teal-200 bg-teal-50/40 relative">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg font-black text-teal-800">SAS</span>
+              <span class="text-xs bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-bold">Side-Angle-Side</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              2 sides and the <strong>included angle</strong> (the angle pinched right between them).
+            </p>
+            <div class="mt-3 p-2 bg-white rounded-lg border border-teal-100 font-mono text-[11px] text-teal-900">
+              AB ≅ DE, ∠B ≅ ∠E, BC ≅ EF
+            </div>
+          </div>
+
+          <!-- ASA -->
+          <div class="p-4 rounded-xl border border-indigo-200 bg-indigo-50/40 relative">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg font-black text-indigo-800">ASA</span>
+              <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded font-bold">Angle-Side-Angle</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              2 angles and the <strong>included side</strong> (the side connecting the two angles).
+            </p>
+            <div class="mt-3 p-2 bg-white rounded-lg border border-indigo-100 font-mono text-[11px] text-indigo-900">
+              ∠A ≅ ∠D, AB ≅ DE, ∠B ≅ ∠E
+            </div>
+          </div>
+
+          <!-- AAS -->
+          <div class="p-4 rounded-xl border border-indigo-200 bg-indigo-50/40 relative">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg font-black text-indigo-800">AAS</span>
+              <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded font-bold">Angle-Angle-Side</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              2 angles and a <strong>non-included side</strong> (a side not directly between the two angles).
+            </p>
+            <div class="mt-3 p-2 bg-white rounded-lg border border-indigo-100 font-mono text-[11px] text-indigo-900">
+              ∠A ≅ ∠D, ∠B ≅ ∠E, BC ≅ EF
+            </div>
+          </div>
+
+          <!-- HL -->
+          <div class="sm:col-span-2 p-4 rounded-xl border border-amber-300 bg-amber-50/50 relative">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <span class="text-lg font-black text-amber-900">HL</span>
+                <span class="text-xs bg-amber-200 text-amber-900 px-2 py-0.5 rounded font-bold">Hypotenuse-Leg</span>
+              </div>
+              <span class="text-[10px] font-bold uppercase bg-amber-800 text-white px-2 py-0.5 rounded">Right Triangles Only</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Requires <strong>3 strict conditions</strong>: (1) Right Triangles (90° angle present), (2) Congruent Hypotenuses, and (3) One pair of congruent legs.
+            </p>
+            <div class="mt-3 p-2 bg-white rounded-lg border border-amber-200 font-mono text-[11px] text-amber-950">
+              ∠C = ∠F = 90°, AB ≅ DE (Hypotenuse), AC ≅ DF (Leg)
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MID-LESSON AD BANNER -->
+      <div class="ad-slot w-full h-[120px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono my-6">
+        <span>[ ADVERTISEMENT SLOT • IN-LESSON BANNER ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense Auto-Ad Location</span>
+      </div>
+
+      <!-- SECTION 2: THE DANGER TRAPS -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="inline-block px-3 py-1 bg-rose-50 text-rose-700 text-xs font-bold rounded-full mb-3">
+          Exam Traps
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">2. The Two Dangerous Traps (SSA & AAA)</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+          Teachers love to put these two combinations on tests to trick you. Neither of these guarantees triangle congruence!
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+          <!-- TRAP 1: SSA / ASS -->
+          <div class="p-5 rounded-xl border-2 border-rose-200 bg-rose-50/40 relative">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">⚠️</span>
+              <h3 class="font-extrabold text-rose-900 text-base">SSA / ASS (The "Swinging Door")</h3>
+            </div>
+            <p class="text-xs text-rose-950 leading-relaxed mb-3">
+              Side-Side-Angle does <strong>NOT</strong> prove congruence! Because the angle is not trapped between the sides, the second side can "swing" into two completely different triangle shapes (the ambiguous case).
+            </p>
+            <div class="p-2.5 bg-rose-100/80 rounded-lg text-[11px] font-bold text-rose-900">
+              💡 Memory Rule: "Don't be an ASS on a Geometry test — it won't work!" (Unless it's HL in a right triangle).
+            </div>
+          </div>
+
+          <!-- TRAP 2: AAA -->
+          <div class="p-5 rounded-xl border-2 border-amber-200 bg-amber-50/40 relative">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">📐</span>
+              <h3 class="font-extrabold text-amber-900 text-base">AAA (Angle-Angle-Angle)</h3>
+            </div>
+            <p class="text-xs text-amber-950 leading-relaxed mb-3">
+              AAA proves that two triangles have the <strong>same shape</strong> (they are <em>Similar</em> ~), but NOT that they are the same size!
+            </p>
+            <div class="p-2.5 bg-amber-100/80 rounded-lg text-[11px] font-bold text-amber-950">
+              💡 Example: A tiny 30°-60°-90° plastic ruler vs. a giant 30°-60°-90° billboard triangle. Same angles, vastly different sizes!
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 3: ISOSCELES & EQUILATERAL THEOREMS -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900 mb-3">3. Isosceles & Equilateral Triangle Rules</h2>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+          Key rules for solving missing side lengths and angle measures:
+        </p>
+
+        <div class="space-y-4">
+
+          <!-- Isosceles Triangle Theorem -->
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row gap-4 items-start">
+            <div class="w-12 h-12 rounded-xl bg-teal-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+              △
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Isosceles Triangle Theorem (Base Angles Theorem)</h4>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                If two sides of a triangle are congruent (<strong>AB ≅ AC</strong>), then the angles opposite those sides are also congruent (<strong>∠B ≅ ∠C</strong>).
+              </p>
+              <div class="mt-2 text-[11px] text-teal-700 font-semibold">
+                Converse is also true: Equal base angles ➔ Equal opposite legs.
+              </div>
+            </div>
+          </div>
+
+          <!-- Equilateral Triangle -->
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row gap-4 items-start">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+              60°
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Equilateral & Equiangular Property</h4>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                If all 3 sides are congruent, then all 3 interior angles are congruent and equal to <strong>60°</strong> (since 180° / 3 = 60°).
+              </p>
+            </div>
+          </div>
+
+          <!-- Exterior Angle Theorem -->
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row gap-4 items-start">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+              ∠x
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Exterior Angle Theorem</h4>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                The measure of an exterior angle of a triangle equals the sum of the two remote (opposite) interior angles: <strong>∠Exterior = ∠A + ∠B</strong>.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 4: INTERACTIVE TRIANGLE CONGRUENCE CHECKER WIDGET -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-2xl font-bold text-slate-900">4. Interactive Congruence Checker</h2>
+          <span class="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full">Interactive Lab</span>
+        </div>
+        <p class="text-xs text-slate-500 mb-6">
+          Select a 3-part combination below to test whether it proves triangle congruence, fails, or triggers a trap!
+        </p>
+
+        <!-- SELECTOR BUTTONS -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+          <button onclick="selectPattern('SSS')" id="btn-SSS" class="pattern-btn p-3 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:border-teal-500 transition">SSS</button>
+          <button onclick="selectPattern('SAS')" id="btn-SAS" class="pattern-btn p-3 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:border-teal-500 transition">SAS</button>
+          <button onclick="selectPattern('ASA')" id="btn-ASA" class="pattern-btn p-3 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:border-teal-500 transition">ASA</button>
+          <button onclick="selectPattern('AAS')" id="btn-AAS" class="pattern-btn p-3 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:border-teal-500 transition">AAS</button>
+          <button onclick="selectPattern('HL')" id="btn-HL" class="pattern-btn p-3 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:border-teal-500 transition">HL (Right △)</button>
+          <button onclick="selectPattern('SSA')" id="btn-SSA" class="pattern-btn p-3 rounded-xl border border-rose-200 bg-rose-50/30 text-xs font-bold text-rose-700 hover:border-rose-400 transition">SSA / ASS ⚠️</button>
+          <button onclick="selectPattern('AAA')" id="btn-AAA" class="pattern-btn p-3 rounded-xl border border-amber-200 bg-amber-50/30 text-xs font-bold text-amber-700 hover:border-amber-400 transition">AAA 📐</button>
+          <button onclick="selectPattern('SS')" id="btn-SS" class="pattern-btn p-3 rounded-xl border border-slate-200 text-xs font-bold text-slate-400 hover:border-slate-400 transition">SS (Only 2 Parts)</button>
+        </div>
+
+        <!-- VISUAL DIAGRAM CANVAS & RESULTS DISPLAY -->
+        <div class="p-6 bg-slate-900 text-white rounded-2xl flex flex-col items-center justify-center text-center">
+          
+          <div id="svgContainer" class="w-full max-w-[340px] h-[140px] flex items-center justify-center mb-4">
+            <!-- Dynamic SVG Triangles -->
+            <svg viewBox="0 0 320 120" class="w-full h-full">
+              <!-- Triangle 1 -->
+              <polygon points="20,100 100,100 60,30" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="3" />
+              <text x="60" y="115" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="sans-serif">△ABC</text>
+              
+              <!-- Triangle 2 -->
+              <polygon points="180,100 260,100 220,30" fill="rgba(99, 102, 241, 0.2)" stroke="#6366f1" stroke-width="3" />
+              <text x="220" y="115" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="sans-serif">△DEF</text>
+            </svg>
+          </div>
+
+          <div id="statusBadge" class="inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-2 bg-slate-800 text-slate-300">
+            Select a pattern above
+          </div>
+
+          <h3 id="resultTitle" class="text-xl font-extrabold text-white mb-2">Click a button to evaluate</h3>
+          <p id="resultDesc" class="text-xs text-slate-300 max-w-md leading-relaxed">
+            See whether the selected combination guarantees △ABC ≅ △DEF or fails.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 5: QUIZ -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-slate-900">5. Unit 3 Quiz</h2>
+          <span class="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full" id="quizScore">Score: 0 / 5</span>
+        </div>
+
+        <div class="space-y-6">
+
+          <!-- Q1 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q1: Two triangles have 2 pairs of congruent sides and the angle TRAPPED directly between those sides is congruent. Which rule proves △ABC ≅ △DEF?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, true, 'Spot on! SAS requires the angle to be included (trapped) between the two sides.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) SAS Postulate</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. SSA does not guarantee congruence!')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) SSA Theorem</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. AAS is for two angles and a non-included side.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) AAS Postulate</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q2: Why does AAA (Angle-Angle-Angle) NOT prove that two triangles are congruent?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, false, 'Incorrect. Angles CAN be equal across different triangles.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) Angles cannot be measured accurately</button>
+              <button onclick="checkQuiz(this, true, 'Correct! AAA proves the triangles have the same shape (Similar ~), but they could be completely different sizes.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) AAA only proves similarity (same shape), not equal size</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. AAA is a valid rule for similarity, just not for congruence.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) AAA is only for right triangles</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q3: An isosceles triangle has a vertex angle of 40°. What is the measure of each base angle?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, false, 'Incorrect. 140° is the sum of both base angles combined.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) 140°</button>
+              <button onclick="checkQuiz(this, true, 'Awesome job! (180° - 40°) / 2 = 140° / 2 = 70° each.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) 70°</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. Remember all 3 angles must add up to 180°!')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) 40°</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q4: What conditions MUST be met to use the HL (Hypotenuse-Leg) shortcut?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, false, 'Incorrect. HL works ONLY for right triangles (90° angle present).')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) Any triangle with 2 congruent sides</button>
+              <button onclick="checkQuiz(this, true, 'Right on! HL requires a 90° Right Triangle, congruent hypotenuses, and 1 pair of congruent legs.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) Right triangle + congruent hypotenuse + 1 congruent leg</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. Three equal angles is AAA, not HL.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) 3 equal angles and 1 right angle</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q5: Two interior angles of a triangle measure 55° and 65°. What is the measure of the 3rd interior angle?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, true, 'Bingo! 180° - (55° + 65°) = 180° - 120° = 60°.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) 60°</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. 120° is the sum of the first two angles.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) 120°</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. Check your math again!')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) 50°</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BOTTOM NAVIGATION LINKS -->
+      <div class="flex items-center justify-between pt-4">
+        <a href="geometry-unit2-proofs.html" class="text-sm font-bold text-slate-600 hover:text-slate-900">&larr; Unit 2: Two-Column Proofs</a>
+        <a href="geometry-unit4-trigonometry.html" class="bg-teal-600 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-teal-700 shadow-md">Next: Unit 4 (Right △ & Trig) &rarr;</a>
+      </div>
+
+    </article>
+
+    <!-- RIGHT COLUMN: SIDEBAR ADS & SOLVER (4 Cols) -->
+    <aside class="lg:col-span-4 space-y-6">
+
+      <!-- TRIANGLE ANGLE-SUM SOLVER WIDGET -->
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-lg">🧮</span>
+          <h3 class="font-bold text-slate-900 text-sm">Triangle Angle Sum Solver</h3>
+        </div>
+        <p class="text-xs text-slate-500 mb-4">Enter 2 known angles of any triangle to find the 3rd missing angle:</p>
+        
+        <div class="space-y-3">
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Angle A (°)</label>
+            <input type="number" id="angleA" value="50" min="1" max="178" oninput="calculateMissingAngle()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Angle B (°)</label>
+            <input type="number" id="angleB" value="60" min="1" max="178" oninput="calculateMissingAngle()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-teal-500 outline-none">
+          </div>
+        </div>
+
+        <div id="angleResultBox" class="mt-4 p-4 bg-teal-50 border border-teal-200 rounded-xl text-center">
+          <div class="text-[10px] font-extrabold uppercase tracking-wider text-teal-800">Missing Angle C</div>
+          <div id="angleCVal" class="text-3xl font-black text-teal-900 my-1">70°</div>
+          <div id="triangleTypeBadge" class="inline-block px-2.5 py-0.5 bg-teal-200 text-teal-900 text-[10px] font-bold rounded-full">
+            Acute Triangle (All &lt; 90°)
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR AD SLOT (300x250) -->
+      <div class="ad-slot w-full h-[250px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono p-4 text-center">
+        <span>[ ADVERTISEMENT SLOT ]</span>
+        <span class="text-slate-400 text-[11px] mt-1">300x250 Medium Rectangle</span>
+      </div>
+
+      <!-- STICKY CHEAT RECAP CARD -->
+      <div class="bg-gradient-to-br from-slate-900 to-indigo-950 text-white p-5 rounded-2xl shadow-md sticky top-20">
+        <h4 class="font-extrabold text-sm mb-2 text-teal-400">⚡ Unit 3 Quick Recap</h4>
+        <ul class="text-xs space-y-2 text-slate-200">
+          <li class="flex items-start gap-1.5"><span class="text-emerald-400 font-bold">✓</span> <span><strong>5 Valid Rules:</strong> SSS, SAS, ASA, AAS, HL</span></li>
+          <li class="flex items-start gap-1.5"><span class="text-rose-400 font-bold">✕</span> <span><strong>SSA / ASS:</strong> Fails (Swinging door)</span></li>
+          <li class="flex items-start gap-1.5"><span class="text-amber-400 font-bold">~</span> <span><strong>AAA:</strong> Proves similarity, NOT ≅</span></li>
+          <li class="flex items-start gap-1.5"><span class="text-teal-400 font-bold">∑</span> <span><strong>Angle Sum:</strong> ∠A + ∠B + ∠C = 180°</span></li>
+        </ul>
+        <a href="geometry-cheat-sheet.html" class="block text-center mt-4 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs py-2 rounded-lg transition">
+          Open Full Cheat Sheet &rarr;
+        </a>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <script>
+    let score = 0;
+    let answeredQuestions = new Set();
+
+    // INTERACTIVE CONGRUENCE CHECKER SCRIPT
+    function selectPattern(pattern) {
+      // Highlight active button
+      document.querySelectorAll('.pattern-btn').forEach(btn => {
+        btn.classList.remove('bg-teal-600', 'text-white', 'border-teal-600', 'bg-rose-600', 'bg-amber-600');
+      });
+
+      const badge = document.getElementById('statusBadge');
+      const title = document.getElementById('resultTitle');
+      const desc = document.getElementById('resultDesc');
+      const activeBtn = document.getElementById(`btn-${pattern}`);
+
+      if (['SSS', 'SAS', 'ASA', 'AAS', 'HL'].includes(pattern)) {
+        if (activeBtn) activeBtn.classList.add('bg-teal-600', 'text-white', 'border-teal-600');
+        badge.className = 'inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-2 bg-emerald-500 text-slate-950';
+        badge.innerText = 'VALID CONGRUENCE SHORTCUT ✓';
+        title.innerText = `△ABC ≅ △DEF by ${pattern}`;
+        
+        const descriptions = {
+          'SSS': 'All 3 corresponding sides are equal in length. This locks the triangles into an identical shape and size!',
+          'SAS': 'The angle is TRAPPED (included) directly between the two known sides. Proves triangle congruence!',
+          'ASA': 'The side is TRAPPED (included) directly between the two known angles. Proves triangle congruence!',
+          'AAS': 'Two angles and a non-included side are congruent. Proves triangle congruence!',
+          'HL': 'Hypotenuse-Leg works specifically for Right Triangles with a 90° angle, congruent hypotenuse, and one congruent leg.'
+        };
+        desc.innerText = descriptions[pattern];
+
+      } else if (pattern === 'SSA') {
+        if (activeBtn) activeBtn.classList.add('bg-rose-600', 'text-white');
+        badge.className = 'inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-2 bg-rose-500 text-white';
+        badge.innerText = 'DANGER TRAP ⚠️ (FAILS)';
+        title.innerText = 'SSA / ASS Does NOT Prove Congruence!';
+        desc.innerText = 'The angle is NOT trapped between the two sides. The second side can swing like a door, creating two completely different non-congruent triangles!';
+
+      } else if (pattern === 'AAA') {
+        if (activeBtn) activeBtn.classList.add('bg-amber-600', 'text-white');
+        badge.className = 'inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-2 bg-amber-400 text-slate-950';
+        badge.innerText = 'SIMILARITY ONLY ~ (FAILS ≅)';
+        title.innerText = 'AAA Proves Similarity (~), NOT Congruence (≅)';
+        desc.innerText = 'Three matching angles prove the triangles have identical SHAPE, but NOT identical SIZE. A small triangle and a huge triangle can have matching angles!';
+
+      } else {
+        if (activeBtn) activeBtn.classList.add('bg-slate-700', 'text-white');
+        badge.className = 'inline-block px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-2 bg-slate-700 text-slate-300';
+        badge.innerText = 'INSUFFICIENT INFORMATION ❌';
+        title.innerText = 'Only 2 Given Parts';
+        desc.innerText = 'You need AT LEAST 3 congruent parts (and a valid shortcut) to prove two triangles are congruent!';
+      }
+    }
+
+    // QUIZ SCRIPT
+    function checkQuiz(btn, isCorrect, msg) {
+      const parent = btn.closest('.space-y-6 > div');
+      const feedback = parent.querySelector('.feedback');
+      feedback.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800', 'bg-rose-50', 'text-rose-800');
+      
+      if (isCorrect) {
+        feedback.classList.add('bg-emerald-50', 'text-emerald-800');
+        feedback.innerText = msg;
+        if (!answeredQuestions.has(parent)) {
+          score++;
+          answeredQuestions.add(parent);
+          document.getElementById('quizScore').innerText = `Score: ${score} / 5`;
+        }
+      } else {
+        feedback.classList.add('bg-rose-50', 'text-rose-800');
+        feedback.innerText = msg;
+      }
+    }
+
+    // SIDEBAR ANGLE-SUM SOLVER
+    function calculateMissingAngle() {
+      const valA = parseFloat(document.getElementById('angleA').value) || 0;
+      const valB = parseFloat(document.getElementById('angleB').value) || 0;
+      const valCDisplay = document.getElementById('angleCVal');
+      const badge = document.getElementById('triangleTypeBadge');
+      const box = document.getElementById('angleResultBox');
+
+      const sumAB = valA + valB;
+      const angleC = 180 - sumAB;
+
+      if (valA <= 0 || valB <= 0 || sumAB >= 180) {
+        valCDisplay.innerText = 'Invalid';
+        badge.innerText = 'Sum of A + B must be < 180°';
+        badge.className = 'inline-block px-2.5 py-0.5 bg-rose-200 text-rose-900 text-[10px] font-bold rounded-full';
+        box.className = 'mt-4 p-4 bg-rose-50 border border-rose-200 rounded-xl text-center';
+        return;
+      }
+
+      box.className = 'mt-4 p-4 bg-teal-50 border border-teal-200 rounded-xl text-center';
+      valCDisplay.innerText = `${angleC}°`;
+
+      // Classify triangle
+      const angles = [valA, valB, angleC];
+      const maxAngle = Math.max(...angles);
+
+      if (maxAngle === 90) {
+        badge.innerText = 'Right Triangle (1 Angle = 90°)';
+        badge.className = 'inline-block px-2.5 py-0.5 bg-indigo-200 text-indigo-900 text-[10px] font-bold rounded-full';
+      } else if (maxAngle > 90) {
+        badge.innerText = 'Obtuse Triangle (1 Angle > 90°)';
+        badge.className = 'inline-block px-2.5 py-0.5 bg-amber-200 text-amber-900 text-[10px] font-bold rounded-full';
+      } else if (valA === 60 && valB === 60 && angleC === 60) {
+        badge.innerText = 'Equiangular / Equilateral Triangle (60°-60°-60°)';
+        badge.className = 'inline-block px-2.5 py-0.5 bg-emerald-200 text-emerald-900 text-[10px] font-bold rounded-full';
+      } else {
+        badge.innerText = 'Acute Triangle (All Angles < 90°)';
+        badge.className = 'inline-block px-2.5 py-0.5 bg-teal-200 text-teal-900 text-[10px] font-bold rounded-full';
+      }
+    }
+
+    // Initialize default values
+    window.onload = function() {
+      selectPattern('SAS');
+      calculateMissingAngle();
+    };
+  </script>
+
+</body>
+</html>

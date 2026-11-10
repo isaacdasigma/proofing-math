@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 6: Circles & Sectors | Proofing Math</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .ad-slot {
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      border: 2px dashed #cbd5e1;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- TOP AD BANNER (728x90) -->
+  <div class="bg-white border-b border-slate-200 py-3 px-4">
+    <div class="max-w-6xl mx-auto flex justify-center">
+      <div class="ad-slot w-full max-w-[728px] h-[90px] rounded-lg flex flex-col items-center justify-center text-slate-400 text-xs font-mono">
+        <span>[ ADVERTISEMENT SLOT • 728x90 LEADERBOARD ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense / Sponsor Script Location</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-teal-500 text-white flex items-center justify-center font-black text-xl shadow-md shadow-teal-500/20">
+          P
+        </div>
+        <span class="font-extrabold text-xl tracking-tight text-slate-900">Proofing<span class="text-teal-600">Math</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 font-semibold text-sm">
+        <a href="geometry.html" class="text-teal-600 font-bold border-b-2 border-teal-500 pb-1">Geometry</a>
+        <a href="algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra I</a>
+        <a href="advanced-algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra II / Trig</a>
+        <a href="amdm.html" class="text-slate-600 hover:text-teal-600 transition">AMDM</a>
+      </nav>
+
+      <a href="geometry-cheat-sheet.html" class="bg-slate-900 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl hover:bg-teal-600 transition shadow-sm">
+        📄 Cheat Sheets
+      </a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB HEADER -->
+  <div class="bg-slate-900 text-white py-8 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-2 text-xs font-semibold text-teal-400 uppercase tracking-wider mb-2">
+        <a href="geometry.html" class="hover:underline">Geometry</a>
+        <span>&rsaquo;</span>
+        <span>Unit 6</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Unit 6: Circles & Sectors</h1>
+      <p class="text-slate-300 mt-2 max-w-2xl text-sm sm:text-base">
+        Master arc lengths, sector areas (pizza slice formula), and central vs. inscribed angle theorems with interactive solvers.
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN LESSON & SIDEBAR LAYOUT -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- LEFT COLUMN: LESSON CONTENT (8 Cols) -->
+    <article class="lg:col-span-8 space-y-8">
+
+      <!-- SECTION 1: CIRCLE FORMULAS & PIZZA SLICES -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="inline-block px-3 py-1 bg-rose-50 text-rose-700 text-xs font-bold rounded-full mb-3">
+          Core Formulas
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Circle & Sector ("Pizza Slice") Formulas</h2>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          A sector is just a fraction of the full circle. If you know the angle (θ) out of 360°, you just multiply the full circle formula by (θ / 360°):
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+            <span class="text-xs font-bold text-rose-600 uppercase">Entire Circle</span>
+            <div class="mt-2 space-y-1 font-mono text-xs text-slate-800">
+              <div>• <strong>Area:</strong> A = πr²</div>
+              <div>• <strong>Circumference:</strong> C = 2πr (or πd)</div>
+            </div>
+          </div>
+          <div class="p-4 bg-rose-50/50 border border-rose-100 rounded-xl">
+            <span class="text-xs font-bold text-rose-700 uppercase">Fraction of Circle (Sector)</span>
+            <div class="mt-2 space-y-1 font-mono text-xs text-rose-950">
+              <div>• <strong>Sector Area:</strong> (θ / 360°) × πr²</div>
+              <div>• <strong>Arc Length:</strong> (θ / 360°) × 2πr</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MID-LESSON AD BANNER -->
+      <div class="ad-slot w-full h-[120px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono my-6">
+        <span>[ ADVERTISEMENT SLOT • IN-LESSON BANNER ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense Auto-Ad Location</span>
+      </div>
+
+      <!-- SECTION 2: CENTRAL VS INSCRIBED ANGLES -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Central vs. Inscribed Angle Rule</h2>
+        <p class="text-slate-600 text-sm mb-4">Where the vertex of the angle sits inside the circle changes its angle measure completely:</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-5 bg-teal-50 border border-teal-200 rounded-xl">
+            <div class="text-xs font-bold text-teal-700 uppercase mb-1">Rule 1</div>
+            <h3 class="font-extrabold text-teal-950 text-base mb-1">Central Angle (Vertex at Center)</h3>
+            <p class="text-xs text-teal-900 leading-relaxed">
+              The angle measure is <strong>EXACTLY EQUAL</strong> to its intercepted arc.<br>
+              <em>Example: Central Angle = 80° &rarr; Arc = 80°</em>
+            </p>
+          </div>
+          <div class="p-5 bg-indigo-50 border border-indigo-200 rounded-xl">
+            <div class="text-xs font-bold text-indigo-700 uppercase mb-1">Rule 2</div>
+            <h3 class="font-extrabold text-indigo-950 text-base mb-1">Inscribed Angle (Vertex on Edge)</h3>
+            <p class="text-xs text-indigo-900 leading-relaxed">
+              The angle measure is <strong>HALF</strong> of its intercepted arc.<br>
+              <em>Example: Arc = 80° &rarr; Inscribed Angle = 40°</em>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: QUIZ -->
+      <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-slate-900">3. Unit 6 Quick Check Quiz</h2>
+          <span class="text-xs font-bold text-teal-600 bg-teal-50 px-3 py-1 rounded-full" id="quizScore">Score: 0 / 2</span>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Q1 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q1: An inscribed angle touches the back edge of a circle and opens to an arc of 100°. What is the measure of the inscribed angle?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, false, 'Incorrect. 100° would be the answer if it were a Central angle.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) 100°</button>
+              <button onclick="checkQuiz(this, true, 'Spot on! Inscribed angles are always HALF of their intercepted arc (100 / 2 = 50°).')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) 50°</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. 200° is double the arc!')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) 200°</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <p class="font-semibold text-slate-900 text-sm mb-3">Q2: A pizza has a radius of 6 inches. A slice has a central angle of 60°. What fraction of the whole pizza is this slice?</p>
+            <div class="space-y-2 text-sm">
+              <button onclick="checkQuiz(this, true, 'Correct! 60° / 360° reduces down to 1/6th of the full circle.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">A) 1/6</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. 90° / 360° is 1/4.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">B) 1/4</button>
+              <button onclick="checkQuiz(this, false, 'Incorrect. 45° / 360° is 1/8.')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-100 font-medium">C) 1/8</button>
+            </div>
+            <div class="feedback hidden mt-3 p-3 rounded-lg text-xs font-medium"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM NAVIGATION -->
+      <div class="flex items-center justify-between pt-4">
+        <a href="geometry-unit5-polygons.html" class="text-sm font-bold text-slate-600 hover:text-slate-900">&larr; Unit 5: Quadrilaterals & Polygons</a>
+        <a href="geometry.html" class="bg-slate-900 text-white font-bold text-sm px-5 py-3 rounded-xl hover:bg-teal-600 shadow-md">🎉 Back to Geometry Hub</a>
+      </div>
+
+    </article>
+
+    <!-- RIGHT COLUMN: SIDEBAR ADS & SOLVER (4 Cols) -->
+    <aside class="lg:col-span-4 space-y-6">
+
+      <!-- SECTOR & ARC CALCULATOR -->
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <h3 class="font-bold text-slate-900 text-sm mb-2">🍕 Sector & Arc Live Solver</h3>
+        <p class="text-xs text-slate-500 mb-3">Enter radius (r) and Central Angle (θ):</p>
+        
+        <div class="space-y-2 mb-3">
+          <input type="number" id="circR" placeholder="Radius (r)" value="6" class="w-full p-2 border border-slate-300 rounded-lg text-xs font-semibold">
+          <input type="number" id="circAngle" placeholder="Central Angle θ (°)" value="60" class="w-full p-2 border border-slate-300 rounded-lg text-xs font-semibold">
+        </div>
+
+        <button onclick="calcSector()" class="w-full bg-rose-600 text-white font-bold text-xs py-2.5 rounded-lg hover:bg-rose-700 transition shadow-sm mb-3">
+          Calculate Sector & Arc
+        </button>
+
+        <div id="sectorResult" class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-xs text-rose-950 font-medium text-center space-y-1">
+          <div>Sector Area = <strong>18.85 sq units</strong> (6π)</div>
+          <div>Arc Length = <strong>6.28 units</strong> (2π)</div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR AD SLOT (300x250) -->
+      <div class="ad-slot w-full h-[250px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono p-4 text-center">
+        <span>[ ADVERTISEMENT SLOT ]</span>
+        <span class="text-slate-400 text-[11px] mt-1">300x250 Medium Rectangle</span>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <script>
+    let score = 0;
+
+    function checkQuiz(btn, isCorrect, msg) {
+      const parent = btn.closest('.space-y-6 > div');
+      const feedback = parent.querySelector('.feedback');
+      feedback.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800', 'bg-rose-50', 'text-rose-800');
+      
+      if (isCorrect) {
+        feedback.classList.add('bg-emerald-50', 'text-emerald-800');
+        feedback.innerText = msg;
+        score++;
+        document.getElementById('quizScore').innerText = `Score: ${score} / 2`;
+      } else {
+        feedback.classList.add('bg-rose-50', 'text-rose-800');
+        feedback.innerText = msg;
+      }
+    }
+
+    function calcSector() {
+      const r = parseFloat(document.getElementById('circR').value) || 0;
+      const deg = parseFloat(document.getElementById('circAngle').value) || 0;
+      const resBox = document.getElementById('sectorResult');
+
+      if (r <= 0 || deg <= 0 || deg > 360) {
+        resBox.innerHTML = '<span class="text-rose-600 font-bold">Please enter a valid positive radius and angle (1°-360°).</span>';
+        return;
+      }
+
+      const frac = deg / 360;
+      const area = frac * Math.PI * r * r;
+      const arc = frac * 2 * Math.PI * r;
+
+      resBox.innerHTML = `<div>Sector Area = <strong>${area.toFixed(2)}</strong> sq units</div><div>Arc Length = <strong>${arc.toFixed(2)}</strong> units</div>`;
+    }
+  </script>
+
+</body>
+</html>

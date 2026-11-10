@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +10,13 @@
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
 
   <!-- NAVIGATION BAR -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <div class="w-9 h-9 rounded-xl bg-teal-500 text-white flex items-center justify-center font-black text-xl shadow-md shadow-teal-500/20">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-xl bg-teal-500 text-white flex items-center justify-center font-black text-xl shadow-md shadow-teal-500/20 group-hover:bg-teal-600 transition">
           P
         </div>
         <span class="font-extrabold text-xl tracking-tight text-slate-900">Proofing<span class="text-teal-600">Math</span></span>
@@ -35,80 +35,92 @@
     </div>
   </header>
 
-  <!-- HEADER BANNER -->
-  <div class="bg-slate-900 text-white py-8 px-4">
+  <!-- BREADCRUMB & HEADER -->
+  <div class="bg-slate-900 text-white py-10 px-4 sm:px-6">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Privacy Policy</h1>
+      <div class="flex items-center gap-2 text-xs font-semibold text-teal-400 uppercase tracking-wider mb-2">
+        <a href="index.html" class="hover:underline">Home</a>
+        <span>&rsaquo;</span>
+        <span>Legal</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Privacy Policy</h1>
       <p class="text-slate-400 mt-2 text-sm sm:text-base">
-        Last Updated: November 2026 • Your privacy and safety on Proofing Math matter to us.
+        Effective Date: November 2026 • Transparency and safety for students and visitors.
       </p>
     </div>
   </div>
 
   <!-- MAIN CONTENT CONTAINER -->
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full space-y-8">
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full space-y-6">
 
-    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-      <h2 class="text-xl font-bold text-slate-900">1. Overview</h2>
+    <!-- 1. OVERVIEW -->
+    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
+      <h2 class="text-lg sm:text-xl font-bold text-slate-900">1. Overview</h2>
       <p class="text-slate-600 text-sm leading-relaxed">
-        Welcome to <strong>Proofing Math</strong> ("we," "our," or "us"). Proofing Math is a free, student-focused educational resource designed to help high school students master Geometry, Algebra, and AMDM. This Privacy Policy explains how information is collected, used, and safeguarded when you visit our site.
+        Welcome to <strong>Proofing Math</strong>. We build free, student-focused high school math tools and interactive lessons across Geometry, Algebra, and AMDM. This Privacy Policy details how data is handled when you browse our website.
       </p>
     </section>
 
-    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-      <h2 class="text-xl font-bold text-slate-900">2. Information We Collect</h2>
+    <!-- 2. NO ACCOUNT / PII NEEDED -->
+    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
+      <h2 class="text-lg sm:text-xl font-bold text-slate-900">2. Information Collection</h2>
       <p class="text-slate-600 text-sm leading-relaxed">
-        Proofing Math does not require account creation, registration, or login. We do not collect personally identifiable information (PII) such as names, postal addresses, or phone numbers.
+        Proofing Math is completely free to use without logging in, creating an account, or entering personal information. We do not collect names, phone numbers, home addresses, or user registration details.
       </p>
-      <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs text-slate-700 space-y-2">
-        <p class="font-bold text-slate-900">Log Files & Device Data:</p>
-        <p>
-          Like most standard website servers, we automatically gather non-personal usage information when you browse our site. This may include internet protocol (IP) addresses, browser type, internet service provider (ISP), referring/exit pages, platform type, date/time stamps, and number of clicks to analyze trends and administer the site.
+      <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs text-slate-700 space-y-2 mt-3">
+        <p class="font-bold text-slate-900">Standard Server Log Data:</p>
+        <p class="leading-relaxed">
+          Standard non-identifying technical data (such as browser type, device type, referring pages, and date/time stamps) may be logged automatically by host servers to maintain website reliability and performance.
         </p>
       </div>
     </section>
 
-    <!-- CRITICAL ADSENSE SECTION -->
-    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+    <!-- 3. ADSENSE & COOKIES (ADSENSE REQUIRED SECTION) -->
+    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
       <div class="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full">
-        Third-Party Advertising
+        Advertising & Cookies
       </div>
-      <h2 class="text-xl font-bold text-slate-900">3. Google AdSense & Cookies Policy</h2>
+      <h2 class="text-lg sm:text-xl font-bold text-slate-900">3. Third-Party Advertising & Google AdSense</h2>
       <p class="text-slate-600 text-sm leading-relaxed">
-        We use third-party advertising companies, including <strong>Google AdSense</strong>, to serve ads when you visit our website. These companies may use cookies, web beacons, or tracking technologies to serve ads based on your prior visits to our site or other websites on the internet.
+        Proofing Math works with third-party advertising partners, including <strong>Google AdSense</strong>, to display non-intrusive ads that support free content. These partners may use cookies or device identifiers to serve ads based on prior web visits.
       </p>
 
-      <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-2 pl-2">
-        <li>
-          <strong>Cookies:</strong> Google uses cookies to serve ads on Proofing Math. Google's use of advertising cookies enables it and its partners to serve ads to users based on their visit to our site and/or other sites on the Internet.
-        </li>
-        <li>
-          <strong>Personalized Advertising Opt-Out:</strong> Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" class="text-teal-600 underline font-semibold">Google Ads Settings</a>.
-        </li>
-        <li>
-          <strong>Third-Party Opt-Out:</strong> Alternatively, users can opt out of third-party vendor use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" class="text-teal-600 underline font-semibold">www.aboutads.info</a>.
-        </li>
-      </ul>
+      <div class="space-y-3 text-xs sm:text-sm text-slate-600 pt-1">
+        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+          <strong class="text-slate-900 block mb-1">DART Cookies:</strong>
+          Google's use of advertising cookies enables it and its partners to serve ads to site visitors based on their visit to Proofing Math and other sites across the internet.
+        </div>
+        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl">
+          <strong class="text-slate-900 block mb-1">Opting Out of Personalized Ads:</strong>
+          Visitors can easily opt out of personalized Google ads by visiting 
+          <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" class="text-teal-600 font-bold hover:underline">Google Ad Settings</a>. 
+          You may also opt out of third-party vendor cookies by visiting 
+          <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" class="text-teal-600 font-bold hover:underline">aboutads.info</a>.
+        </div>
+      </div>
     </section>
 
-    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-      <h2 class="text-xl font-bold text-slate-900">4. Children & Student Privacy Protection</h2>
+    <!-- 4. CHILDREN & STUDENT PRIVACY (COPPA) -->
+    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
+      <h2 class="text-lg sm:text-xl font-bold text-slate-900">4. Student Safety & COPPA Compliance</h2>
       <p class="text-slate-600 text-sm leading-relaxed">
-        Proofing Math is built for high school students. In compliance with the Children's Online Privacy Protection Act (COPPA), we do not knowingly collect or solicit personal information from children under the age of 13. If you believe a child under 13 has provided personal data on our site, please contact us immediately so we can remove such information.
-      </p>
-    </section>
-
-    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-      <h2 class="text-xl font-bold text-slate-900">5. External Links</h2>
-      <p class="text-slate-600 text-sm leading-relaxed">
-        Our website may contain links to external sites (such as GitHub, educational tools, or online graphing calculators). Please note that we have no control over the content or privacy practices of these external sites and encourage users to review their respective privacy policies.
+        Proofing Math is designed specifically for secondary education students. In compliance with the Children's Online Privacy Protection Act (COPPA), we do not knowingly solicit or harvest personal identifiable information from children under the age of 13.
       </p>
     </section>
 
-    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-      <h2 class="text-xl font-bold text-slate-900">6. Updates to This Policy</h2>
+    <!-- 5. EXTERNAL LINKS -->
+    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
+      <h2 class="text-lg sm:text-xl font-bold text-slate-900">5. Links to External Resources</h2>
       <p class="text-slate-600 text-sm leading-relaxed">
-        We reserve the right to update or modify this Privacy Policy at any time. Any changes will be posted on this page with an updated "Last Updated" date.
+        Our site may contain links to external tools, graphing utilities, or educational reference material. Proofing Math is not responsible for the content or privacy practices of external third-party sites.
+      </p>
+    </section>
+
+    <!-- 6. POLICY CHANGES -->
+    <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
+      <h2 class="text-lg sm:text-xl font-bold text-slate-900">6. Updates to This Policy</h2>
+      <p class="text-slate-600 text-sm leading-relaxed">
+        This Privacy Policy may be updated periodically to reflect changes in web standards or ad provider policies. Revisions will be reflected directly on this page.
       </p>
     </section>
 
@@ -122,10 +134,10 @@
         <span class="font-bold text-white">ProofingMath</span>
         <span>&copy; 2026</span>
       </div>
-      <div class="flex gap-4">
+      <div class="flex items-center gap-6 font-medium">
         <a href="index.html" class="hover:text-white transition">Home</a>
         <a href="geometry.html" class="hover:text-white transition">Geometry</a>
-        <a href="privacy.html" class="text-white font-semibold">Privacy Policy</a>
+        <a href="privacy.html" class="text-teal-400 font-bold hover:underline">Privacy Policy</a>
       </div>
     </div>
   </footer>

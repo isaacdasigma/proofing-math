@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry Cheat Sheet & Proof Survival Guide | Proofing Math</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .ad-slot {
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      border: 2px dashed #cbd5e1;
+    }
+    /* PRINT STYLES FOR CLEAN PDF EXPORTS */
+    @media print {
+      header, footer, .no-print, .ad-slot, aside { display: none !important; }
+      body { background: white !important; color: black !important; }
+      main { display: block !important; width: 100% !important; margin: 0 !important; padding: 0 !important; }
+      .cheat-card { break-inside: avoid; border: 1px solid #cbd5e1 !important; shadow: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- TOP AD BANNER (728x90) -->
+  <div class="bg-white border-b border-slate-200 py-3 px-4 no-print">
+    <div class="max-w-6xl mx-auto flex justify-center">
+      <div class="ad-slot w-full max-w-[728px] h-[90px] rounded-lg flex flex-col items-center justify-center text-slate-400 text-xs font-mono">
+        <span>[ ADVERTISEMENT SLOT • 728x90 LEADERBOARD ]</span>
+        <span class="text-[10px] text-slate-400 mt-1">Google AdSense / Sponsor Script</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-teal-500 text-white flex items-center justify-center font-black text-xl shadow-md shadow-teal-500/20">
+          P
+        </div>
+        <span class="font-extrabold text-xl tracking-tight text-slate-900">Proofing<span class="text-teal-600">Math</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 font-semibold text-sm">
+        <a href="geometry.html" class="text-slate-600 hover:text-teal-600 transition">Geometry Hub</a>
+        <a href="algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra I</a>
+        <a href="advanced-algebra.html" class="text-slate-600 hover:text-teal-600 transition">Algebra II / Trig</a>
+        <a href="amdm.html" class="text-slate-600 hover:text-teal-600 transition">AMDM</a>
+      </nav>
+
+      <button onclick="window.print()" class="bg-teal-600 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl hover:bg-teal-700 transition shadow-sm flex items-center gap-1.5">
+        🖨️ Print / Save PDF
+      </button>
+    </div>
+  </header>
+
+  <!-- CHEAT SHEET HERO & SEARCH -->
+  <div class="bg-slate-900 text-white py-10 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">Quick Reference Guide</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Geometry Formula & Proof Cheat Sheet</h1>
+        <p class="text-slate-300 mt-2 max-w-xl text-sm">
+          Everything you need for tests, homework, and quick cramming on one clean sheet.
+        </p>
+      </div>
+
+      <div class="w-full md:w-auto no-print">
+        <input 
+          type="text" 
+          id="cheatSearch" 
+          onkeyup="filterCheatCards()" 
+          placeholder="🔍 Search cheat sheet (e.g. SOH CAH TOA, proofs, circle)..." 
+          class="w-full md:w-80 px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500"
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CHEAT SHEET GRID -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- LEFT CARDS CONTAINER (8 Cols) -->
+    <div class="lg:col-span-8 space-y-6" id="cheatCardContainer">
+
+      <!-- CARD 1: LINES & TRANSVERSALS -->
+      <section class="cheat-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm" data-keywords="lines transversals angles parallel vertical corresponding alternate interior">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+          <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-teal-500"></span>
+            Lines & Transversals Cheat Code
+          </h2>
+          <span class="text-xs font-bold text-slate-400">Unit 1</span>
+        </div>
+        <p class="text-xs text-slate-600 mb-3"><strong>Big Angle / Small Angle Rule:</strong> All Big (obtuse) angles are equal, all Small (acute) angles are equal. Any Big + Small = 180°.</p>
+        <div class="bg-slate-50 p-3 rounded-xl text-xs space-y-1 font-mono text-slate-700">
+          <div>• <strong>Corresponding Angles:</strong> Equal (Same spot, shifted down)</div>
+          <div>• <strong>Alternate Interior:</strong> Equal (Inside tracks, opposite sides)</div>
+          <div>• <strong>Alternate Exterior:</strong> Equal (Outside tracks, opposite sides)</div>
+          <div>• <strong>Consecutive Interior:</strong> Add up to 180° (Inside tracks, same side)</div>
+        </div>
+      </section>
+
+      <!-- CARD 2: PROOF SURVIVAL KIT -->
+      <section class="cheat-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm" data-keywords="proofs reason postulate theorem given cpctc symmetric reflexive transitive">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+          <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+            Top 6 Proof Reasons & Properties
+          </h2>
+          <span class="text-xs font-bold text-slate-400">Unit 2</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 bg-indigo-50/50 border border-indigo-100 rounded-xl">
+            <strong class="text-indigo-950 block mb-1">Reflexive Property:</strong>
+            <code class="text-indigo-700 font-bold">AB ≅ AB</code> or <code class="text-indigo-700 font-bold">∠A ≅ ∠A</code>
+            <p class="text-slate-500 mt-1">Anything equals itself (used when triangles share a side).</p>
+          </div>
+          <div class="p-3 bg-indigo-50/50 border border-indigo-100 rounded-xl">
+            <strong class="text-indigo-950 block mb-1">Transitive Property:</strong>
+            <p class="text-slate-600">If <code class="text-indigo-700 font-bold">A = B</code> and <code class="text-indigo-700 font-bold">B = C</code>, then <code class="text-indigo-700 font-bold">A = C</code>.</p>
+          </div>
+          <div class="p-3 bg-indigo-50/50 border border-indigo-100 rounded-xl">
+            <strong class="text-indigo-950 block mb-1">CPCTC:</strong>
+            <p class="text-slate-600">Corresponding Parts of Congruent Triangles are Congruent. <em>(Use AFTER proving ≅ triangles)</em>.</p>
+          </div>
+          <div class="p-3 bg-indigo-50/50 border border-indigo-100 rounded-xl">
+            <strong class="text-indigo-950 block mb-1">Vertical Angles Theorem:</strong>
+            <p class="text-slate-600">Angles across from each other at an X intersection are ALWAYS congruent.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 3: TRIANGLE CONGRUENCE -->
+      <section class="cheat-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm" data-keywords="triangle congruence sss sas asa aas hl warning ssa aaa">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+          <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+            Triangle Congruence Rules (5 Valid Shortcuts)
+          </h2>
+          <span class="text-xs font-bold text-slate-400">Unit 3</span>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-xs font-bold">
+          <div class="p-2.5 bg-emerald-50 text-emerald-800 rounded-lg">SSS</div>
+          <div class="p-2.5 bg-emerald-50 text-emerald-800 rounded-lg">SAS</div>
+          <div class="p-2.5 bg-emerald-50 text-emerald-800 rounded-lg">ASA</div>
+          <div class="p-2.5 bg-emerald-50 text-emerald-800 rounded-lg">AAS</div>
+          <div class="p-2.5 bg-emerald-50 text-emerald-800 rounded-lg">HL (Right △)</div>
+        </div>
+        <div class="mt-3 p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800">
+          <strong>⚠️ DANGER ZONE:</strong> <span class="font-bold">SSA</span> and <span class="font-bold">AAA</span> do NOT prove congruence! If you see ASS backward or AAA, it's a trap.
+        </div>
+      </section>
+
+      <!-- CARD 4: TRIGONOMETRY (SOH CAH TOA) -->
+      <section class="cheat-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm" data-keywords="trig trigonometry soh cah toa sine cosine tangent right triangle pythagorean">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+          <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+            SOH CAH TOA & Pythagorean Theorem
+          </h2>
+          <span class="text-xs font-bold text-slate-400">Unit 4</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center text-xs font-semibold">
+          <div class="p-3 bg-amber-50 text-amber-900 rounded-xl">
+            <div class="text-base font-extrabold">SOH</div>
+            <div>Sin(θ) = Opposite / Hypotenuse</div>
+          </div>
+          <div class="p-3 bg-amber-50 text-amber-900 rounded-xl">
+            <div class="text-base font-extrabold">CAH</div>
+            <div>Cos(θ) = Adjacent / Hypotenuse</div>
+          </div>
+          <div class="p-3 bg-amber-50 text-amber-900 rounded-xl">
+            <div class="text-base font-extrabold">TOA</div>
+            <div>Tan(θ) = Opposite / Adjacent</div>
+          </div>
+        </div>
+        <div class="mt-3 p-3 bg-slate-100 rounded-xl text-xs font-mono text-center font-bold text-slate-800">
+          Pythagorean Theorem: a² + b² = c²  (c is ALWAYS the hypotenuse across from 90°)
+        </div>
+      </section>
+
+      <!-- CARD 5: CIRCLES & SECTORS -->
+      <section class="cheat-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm" data-keywords="circles arc sector area circumference radius diameter inscribed central">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+          <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+            Circles & Sector Cheat Sheet
+          </h2>
+          <span class="text-xs font-bold text-slate-400">Unit 6</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 bg-slate-50 rounded-xl">
+            <strong>Area & Circumference:</strong>
+            <div class="font-mono mt-1 text-slate-700">Area = πr² | C = 2πr or πd</div>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl">
+            <strong>Pizza Slice Sector Area:</strong>
+            <div class="font-mono mt-1 text-slate-700">Sector Area = (θ / 360°) × πr²</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RIGHT COLUMN: SIDEBAR ADS & QUICK SOLVER (4 Cols) -->
+    <aside class="lg:col-span-4 space-y-6 no-print">
+
+      <!-- QUICK MATH TOOL -->
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+        <h3 class="font-bold text-slate-900 text-sm mb-3">📐 3rd Triangle Angle Finder</h3>
+        <p class="text-xs text-slate-500 mb-3">All angles in a triangle add up to 180°.</p>
+        <div class="space-y-2">
+          <input type="number" id="ang1" placeholder="Angle 1 (°)" value="60" class="w-full p-2 border border-slate-200 rounded-lg text-xs">
+          <input type="number" id="ang2" placeholder="Angle 2 (°)" value="70" class="w-full p-2 border border-slate-200 rounded-lg text-xs">
+          <button onclick="calc3rdAngle()" class="w-full bg-slate-900 text-white font-bold text-xs py-2 rounded-lg hover:bg-teal-600 transition">
+            Calculate Missing Angle
+          </button>
+          <div id="angRes" class="p-2 bg-teal-50 text-teal-800 font-bold text-center text-xs rounded-lg mt-2">
+            Angle 3 = 50°
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR AD (300x250) -->
+      <div class="ad-slot w-full h-[250px] rounded-2xl flex flex-col items-center justify-center text-slate-400 text-xs font-mono p-4 text-center">
+        <span>[ ADVERTISEMENT SLOT ]</span>
+        <span class="text-slate-400 text-[11px] mt-1">300x250 AdSense Placeholder</span>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 no-print">
+    <p>© Proofing Math. Built for high schoolers.</p>
+  </footer>
+
+  <script>
+    function filterCheatCards() {
+      const q = document.getElementById('cheatSearch').value.toLowerCase();
+      const cards = document.querySelectorAll('.cheat-card');
+      cards.forEach(card => {
+        const keywords = card.getAttribute('data-keywords').toLowerCase();
+        const text = card.innerText.toLowerCase();
+        if (keywords.includes(q) || text.includes(q)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function calc3rdAngle() {
+      const a = parseFloat(document.getElementById('ang1').value) || 0;
+      const b = parseFloat(document.getElementById('ang2').value) || 0;
+      const res = 180 - (a + b);
+      if (res <= 0) {
+        document.getElementById('angRes').innerText = "Invalid! Angles sum to > 180°";
+      } else {
+        document.getElementById('angRes').innerText = "Angle 3 = " + res + "°";
+      }
+    }
+  </script>
+
+</body>
+</html>

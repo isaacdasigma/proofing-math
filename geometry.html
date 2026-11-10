@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High School Geometry Hub - Proofing Math</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f3ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#1e1b4b',
+                        },
+                        teal: {
+                            50: '#f0fdf4',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Minimalist math background grid */
+        .math-grid-bg {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+
+        /* Glass card styling */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Ad placeholder pattern */
+        .ad-placeholder {
+            background: #f1f5f9;
+            background-image: repeating-linear-gradient(
+                -45deg,
+                #f1f5f9,
+                #f1f5f9 10px,
+                #e2e8f0 10px,
+                #e2e8f0 20px
+            );
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 math-grid-bg antialiased selection:bg-teal-600 selection:text-white flex flex-col min-h-screen">
+
+    <!-- ANNOUNCEMENT BANNER -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 text-center flex items-center justify-center gap-2 font-medium">
+        <span class="bg-amber-400 text-slate-950 px-2 py-0.5 rounded-full font-bold text-[10px] uppercase tracking-wider">Free Tool</span>
+        <span>Need a fast formula sheet for homework? Check out the Geometry Survival Cheat Sheet!</span>
+        <a href="geometry-cheat-sheet.html" class="underline hover:text-amber-300 transition ml-1 font-semibold">Open Cheat Sheet &rarr;</a>
+    </div>
+
+    <!-- MAIN HEADER NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            
+            <!-- BRAND LOGO -->
+            <a href="index.html" class="flex items-center gap-2.5 group">
+                <div class="w-9 h-9 rounded-xl bg-teal-600 text-white flex items-center justify-center shadow-sm group-hover:bg-teal-700 transition">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="3 20 21 20 12 4 3 20"></polygon>
+                        <path d="M9 14l2 2 4-4"></path>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xl font-bold text-slate-900 tracking-tight">
+                        Proofing<span class="text-teal-600">Math</span>
+                    </span>
+                </div>
+            </a>
+
+            <!-- DESKTOP NAVIGATION -->
+            <nav class="hidden md:flex items-center gap-1.5 text-xs font-bold">
+                <a href="index.html" class="px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-house text-slate-400"></i> Home
+                </a>
+                <a href="geometry.html" class="px-3 py-2 rounded-xl text-teal-700 bg-teal-50 border border-teal-200 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-shapes text-teal-600"></i> Geometry
+                </a>
+                <a href="algebra.html" class="px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-calculator text-slate-400"></i> Algebra I
+                </a>
+                <a href="advanced-algebra.html" class="px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-chart-line text-slate-400"></i> Advanced Algebra
+                </a>
+                <a href="amdm.html" class="px-3 py-2 rounded-xl text-slate-600 hover:bg-slate-100 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-dice text-slate-400"></i> AMDM
+                </a>
+            </nav>
+
+            <!-- RIGHT CTA BUTTON -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="geometry-cheat-sheet.html" class="px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-900 hover:bg-slate-800 text-white shadow-sm transition flex items-center gap-2">
+                    <i class="fa-solid fa-bolt text-amber-400"></i> Cheat Sheet
+                </a>
+            </div>
+
+            <!-- MOBILE MENU TOGGLE -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+
+        <!-- MOBILE DRAWER -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2 shadow-lg">
+            <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-house text-slate-400 w-5"></i> Home
+            </a>
+            <a href="geometry.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-bold bg-teal-50 text-teal-700">
+                <i class="fa-solid fa-shapes text-teal-600 w-5"></i> Geometry Hub
+            </a>
+            <a href="algebra.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-calculator text-emerald-600 w-5"></i> Algebra I
+            </a>
+            <a href="advanced-algebra.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-chart-line text-purple-600 w-5"></i> Advanced Algebra
+            </a>
+            <a href="amdm.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-dice text-amber-600 w-5"></i> AMDM
+            </a>
+            <a href="geometry-cheat-sheet.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-bold bg-slate-900 text-white mt-2">
+                <i class="fa-solid fa-bolt text-amber-400 w-5"></i> Open Geometry Cheat Sheet
+            </a>
+        </div>
+    </header>
+
+    <!-- TOP LEADERBOARD AD SLOT (728x90) -->
+    <div class="max-w-7xl mx-auto px-4 pt-6 w-full flex justify-center">
+        <div id="ad-leaderboard-top" class="ad-placeholder w-full max-w-[728px] h-[90px] border-2 border-dashed border-teal-200 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden">
+            <div class="absolute top-1 right-2 bg-slate-200 text-slate-600 text-[9px] font-bold px-1.5 py-0.5 rounded">ADVERTISEMENT</div>
+            <div class="flex items-center gap-2 text-slate-400 font-mono text-xs font-semibold">
+                <i class="fa-solid fa-rectangle-ad text-base text-teal-500"></i>
+                <span>Leaderboard Banner Ad Space (728 x 90)</span>
+            </div>
+            <span class="text-[11px] text-slate-400">Google AdSense Placement</span>
+        </div>
+    </div>
+
+    <!-- HERO SECTION & LIVE SEARCH -->
+    <section class="py-8 md:py-12 px-4 max-w-7xl mx-auto w-full">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-bold border border-teal-200">
+                <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+                High School Geometry Core Curriculum
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                High School Geometry, <span class="text-teal-600">Simplified.</span>
+            </h1>
+            
+            <p class="text-xs sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                Visual shortcuts, step-by-step proof tricks, and 5-minute bite-sized explanations. Built for students who want to cram less and understand more.
+            </p>
+
+            <!-- LIVE INSTANT SEARCH INPUT -->
+            <div class="pt-3 max-w-xl mx-auto relative">
+                <div class="relative flex items-center">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 text-slate-400 text-sm"></i>
+                    <input type="text" id="unit-search" onkeyup="filterUnits()" placeholder="Search topics (e.g. SOH CAH TOA, proofs, SSS, transversals, circles, slope)..." 
+                        class="w-full pl-11 pr-10 py-3.5 rounded-2xl border-2 border-teal-100 bg-white shadow-md text-xs sm:text-sm focus:outline-none focus:border-teal-600 transition">
+                    <button id="clear-search-btn" onclick="clearSearch()" class="hidden absolute right-3 text-slate-400 hover:text-slate-600 p-1">
+                        <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- QUICK JUMP PILLS -->
+            <div class="flex flex-wrap justify-center gap-1.5 pt-2 text-xs font-semibold text-slate-600">
+                <a href="#unit-1" class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 border border-slate-200 transition">📐 1. Transversals</a>
+                <a href="#unit-2" class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 border border-slate-200 transition">📝 2. Proofs</a>
+                <a href="#unit-3" class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 border border-slate-200 transition">🔺 3. Congruence</a>
+                <a href="#unit-4" class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 border border-slate-200 transition">📐 4. Right Triangles</a>
+                <a href="#unit-5" class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 border border-slate-200 transition">🔷 5. Polygons</a>
+                <a href="#unit-6" class="px-3 py-1 rounded-full bg-white hover:bg-slate-100 border border-slate-200 transition">⭕ 6. Circles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TWO-COLUMN HUB CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-grow w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- LEFT MAIN CONTENT: UNITS ROADMAP (8 COLS) -->
+            <div class="lg:col-span-8 space-y-6" id="units-wrapper">
+
+                <!-- FEATURED CHEAT SHEET BANNER CARD -->
+                <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 shadow-lg border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="space-y-1 text-center sm:text-left">
+                        <div class="inline-flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-print"></i> PDF Printable Download
+                        </div>
+                        <h3 class="text-xl font-extrabold text-white">Need The Master Geometry Cheat Sheet?</h3>
+                        <p class="text-xs text-slate-300">Get all formulas, proof reasons, and SOH CAH TOA shortcuts on one printable page.</p>
+                    </div>
+                    <a href="geometry-cheat-sheet.html" class="px-5 py-3 rounded-2xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold text-xs shrink-0 shadow-md transition flex items-center gap-2">
+                        Open Cheat Sheet &rarr;
+                    </a>
+                </div>
+
+                <!-- UNIT 1: LINES & TRANSVERSALS -->
+                <article id="unit-1" class="unit-card glass-card rounded-3xl p-6 border border-slate-200 hover:border-teal-500 transition-all shadow-sm hover:shadow-md" data-keywords="lines angles transversals big angle small angle vertical supplementary complementary alternate interior exterior consecutive corresponding">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-lg">
+                                1
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold text-teal-700 bg-teal-50 px-2 py-0.5 rounded-full uppercase tracking-wider border border-teal-200">Unit 1 &bull; Core Basics</span>
+                                <h2 class="text-xl font-extrabold text-slate-900">Lines & Angle Relationships</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                        Stop memorizing 8 confusing angle names. Learn how parallel lines cut by a transversal break down into just **Big Angles** and **Small Angles**.
+                    </p>
+
+                    <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-4 space-y-2">
+                        <h4 class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-list-check text-teal-600"></i> Key Lessons in this Unit:
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-teal-500 text-[10px]"></i> Lesson 1.1: The 10-Second Transversal Rule</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-teal-500 text-[10px]"></i> Lesson 1.2: Vertical vs. Supplementary Angles</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-teal-500 text-[10px]"></i> Lesson 1.3: Alternate Interior & Corresponding</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-teal-500 text-[10px]"></i> Lesson 1.4: Consecutive Interior Angle Sums</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span class="text-slate-400 font-mono">4 Lessons &bull; Interactive Widget Included</span>
+                        <button onclick="toggleLessonDrawer('drawer-1')" class="font-bold text-teal-700 hover:text-teal-800 transition flex items-center gap-1">
+                            <span>View Quick Lesson Breakdown</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- EXPANDABLE LESSON DRAWER -->
+                    <div id="drawer-1" class="hidden mt-4 pt-4 border-t border-slate-200 space-y-3 text-xs">
+                        <div class="p-3 bg-teal-50/70 rounded-xl border border-teal-100">
+                            <strong class="text-teal-900 block mb-1">⚡ Quick Rule: Big Angle / Small Angle</strong>
+                            <p class="text-slate-700">All Big Angles equal each other. All Small Angles equal each other. Any Big + Small = 180°.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- UNIT 2: TWO-COLUMN PROOFS -->
+                <article id="unit-2" class="unit-card glass-card rounded-3xl p-6 border border-slate-200 hover:border-purple-500 transition-all shadow-sm hover:shadow-md" data-keywords="proofs two column statements reasons given cpctc reflexive postulate theorem definition midpoint bisector">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-lg">
+                                2
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-200">Unit 2 &bull; Homework Relief</span>
+                                <h2 class="text-xl font-extrabold text-slate-900">Two-Column Proofs Made Easy</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                        Demystify the most hated topic in high school geometry. Treat proofs like detective work where "Given" is your clue list and "Reasons" are your evidence rules.
+                    </p>
+
+                    <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-4 space-y-2">
+                        <h4 class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-list-check text-purple-600"></i> Key Lessons in this Unit:
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-purple-500 text-[10px]"></i> Lesson 2.1: Statements vs. Reasons Setup</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-purple-500 text-[10px]"></i> Lesson 2.2: The Top 10 Proof Reasons Cheat Sheet</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-purple-500 text-[10px]"></i> Lesson 2.3: Reflexive & Transitive Properties</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-purple-500 text-[10px]"></i> Lesson 2.4: When to (and when NOT to) use CPCTC</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span class="text-slate-400 font-mono">4 Lessons &bull; Survival Guide</span>
+                        <button onclick="toggleLessonDrawer('drawer-2')" class="font-bold text-purple-700 hover:text-purple-800 transition flex items-center gap-1">
+                            <span>View Quick Lesson Breakdown</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div id="drawer-2" class="hidden mt-4 pt-4 border-t border-slate-200 space-y-3 text-xs">
+                        <div class="p-3 bg-purple-50/70 rounded-xl border border-purple-100">
+                            <strong class="text-purple-900 block mb-1">🚨 Golden Proof Rule</strong>
+                            <p class="text-slate-700">CPCTC can ONLY be used AFTER you have proved two triangles are congruent using SSS, SAS, ASA, AAS, or HL!</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MID-FEED ADVERTISEMENT BANNER -->
+                <div id="ad-infeed-middle" class="ad-placeholder w-full h-[90px] border border-dashed border-slate-300 rounded-2xl flex flex-col items-center justify-center relative p-3 text-center">
+                    <div class="absolute top-1.5 right-2 bg-slate-200 text-slate-500 text-[9px] font-bold px-1.5 py-0.5 rounded">ADVERTISEMENT</div>
+                    <span class="text-xs font-mono font-semibold text-slate-500">In-Feed Responsive Ad Slot (Google AdSense)</span>
+                </div>
+
+                <!-- UNIT 3: TRIANGLES & CONGRUENCE -->
+                <article id="unit-3" class="unit-card glass-card rounded-3xl p-6 border border-slate-200 hover:border-emerald-500 transition-all shadow-sm hover:shadow-md" data-keywords="triangles congruence sss sas asa aas hl isosceles equilateral sum theorem 180 ssa ass aaa illegal">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
+                                3
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full uppercase tracking-wider border border-emerald-200">Unit 3 &bull; Core Geometry</span>
+                                <h2 class="text-xl font-extrabold text-slate-900">Triangles & Congruence</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                        Understand the 5 valid shortcuts to prove triangles are identical, and learn why SSA and AAA fail.
+                    </p>
+
+                    <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-4 space-y-2">
+                        <h4 class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-list-check text-emerald-600"></i> Key Lessons in this Unit:
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-emerald-500 text-[10px]"></i> Lesson 3.1: Triangle Sum Theorem (180°)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-emerald-500 text-[10px]"></i> Lesson 3.2: SSS, SAS, ASA, AAS, and HL Rules</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-emerald-500 text-[10px]"></i> Lesson 3.3: Why SSA/ASS & AAA are Illegal</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-emerald-500 text-[10px]"></i> Lesson 3.4: Isosceles & Equilateral Triangle Rules</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span class="text-slate-400 font-mono">4 Lessons &bull; Interactive Practice</span>
+                        <button onclick="toggleLessonDrawer('drawer-3')" class="font-bold text-emerald-700 hover:text-emerald-800 transition flex items-center gap-1">
+                            <span>View Quick Lesson Breakdown</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div id="drawer-3" class="hidden mt-4 pt-4 border-t border-slate-200 space-y-3 text-xs">
+                        <div class="p-3 bg-emerald-50/70 rounded-xl border border-emerald-100">
+                            <strong class="text-emerald-900 block mb-1">💡 Memory Trick: SSS vs SAS</strong>
+                            <p class="text-slate-700">In SAS, the angle MUST be trapped directly between the two known sides!</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- UNIT 4: RIGHT TRIANGLES & TRIGONOMETRY -->
+                <article id="unit-4" class="unit-card glass-card rounded-3xl p-6 border border-slate-200 hover:border-cyan-500 transition-all shadow-sm hover:shadow-md" data-keywords="right triangles trigonometry soh cah toa pythagorean theorem 45-45-90 30-60-90 sine cosine tangent hypotenuse">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-lg">
+                                4
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold text-cyan-700 bg-cyan-50 px-2 py-0.5 rounded-full uppercase tracking-wider border border-cyan-200">Unit 4 &bull; Exam Heavy</span>
+                                <h2 class="text-xl font-extrabold text-slate-900">Right Triangles & Trigonometry</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                        Master SOH CAH TOA, special right triangle ratio shortcuts, and real-life height and distance word problems.
+                    </p>
+
+                    <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-4 space-y-2">
+                        <h4 class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-list-check text-cyan-600"></i> Key Lessons in this Unit:
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-cyan-500 text-[10px]"></i> Lesson 4.1: Pythagorean Theorem (a² + b² = c²)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-cyan-500 text-[10px]"></i> Lesson 4.2: 45°-45°-90° Special Triangles (x : x : x√2)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-cyan-500 text-[10px]"></i> Lesson 4.3: 30°-60°-90° Special Triangles (x : x√3 : 2x)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-cyan-500 text-[10px]"></i> Lesson 4.4: SOH CAH TOA Trigonometry Basics</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span class="text-slate-400 font-mono">4 Lessons &bull; Interactive Calculator</span>
+                        <button onclick="toggleLessonDrawer('drawer-4')" class="font-bold text-cyan-700 hover:text-cyan-800 transition flex items-center gap-1">
+                            <span>View Quick Lesson Breakdown</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div id="drawer-4" class="hidden mt-4 pt-4 border-t border-slate-200 space-y-3 text-xs">
+                        <div class="p-3 bg-cyan-50/70 rounded-xl border border-cyan-100">
+                            <strong class="text-cyan-900 block mb-1">📐 SOH CAH TOA Shortcut</strong>
+                            <p class="text-slate-700">Sin = Opp/Hyp | Cos = Adj/Hyp | Tan = Opp/Adj. Remember: Hypotenuse is ALWAYS opposite the 90° angle!</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- UNIT 5: QUADRILATERALS & POLYGONS -->
+                <article id="unit-5" class="unit-card glass-card rounded-3xl p-6 border border-slate-200 hover:border-amber-500 transition-all shadow-sm hover:shadow-md" data-keywords="quadrilaterals polygons interior angle sum exterior angle parallelogram rectangle rhombus square trapezoid kite">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg">
+                                5
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full uppercase tracking-wider border border-amber-200">Unit 5 &bull; Shapes & Properties</span>
+                                <h2 class="text-xl font-extrabold text-slate-900">Quadrilaterals & Polygons</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                        Navigate the family tree of 4-sided shapes and calculate interior and exterior angle sums for any polygon.
+                    </p>
+
+                    <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-4 space-y-2">
+                        <h4 class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-list-check text-amber-600"></i> Key Lessons in this Unit:
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-amber-500 text-[10px]"></i> Lesson 5.1: Polygon Interior Angle Sum Formula (n-2)×180°</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-amber-500 text-[10px]"></i> Lesson 5.2: Polygon Exterior Angles (Always = 360°)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-amber-500 text-[10px]"></i> Lesson 5.3: Parallelograms, Rectangles & Rhombuses</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-amber-500 text-[10px]"></i> Lesson 5.4: Trapezoids, Kites & Special Properties</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span class="text-slate-400 font-mono">4 Lessons &bull; Family Tree Guide</span>
+                        <button onclick="toggleLessonDrawer('drawer-5')" class="font-bold text-amber-700 hover:text-amber-800 transition flex items-center gap-1">
+                            <span>View Quick Lesson Breakdown</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div id="drawer-5" class="hidden mt-4 pt-4 border-t border-slate-200 space-y-3 text-xs">
+                        <div class="p-3 bg-amber-50/70 rounded-xl border border-amber-100">
+                            <strong class="text-amber-900 block mb-1">🔷 Polygon Formula</strong>
+                            <p class="text-slate-700">Total Sum = (n - 2) × 180°. For a hexagon (6 sides): (6-2) × 180° = 720°.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- UNIT 6: CIRCLES & ARCS -->
+                <article id="unit-6" class="unit-card glass-card rounded-3xl p-6 border border-slate-200 hover:border-rose-500 transition-all shadow-sm hover:shadow-md" data-keywords="circles radius diameter circumference area sector area pizza slice arc length central angle inscribed angle tangent">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-lg">
+                                6
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold text-rose-700 bg-rose-50 px-2 py-0.5 rounded-full uppercase tracking-wider border border-rose-200">Unit 6 &bull; Circles</span>
+                                <h2 class="text-xl font-extrabold text-slate-900">Circles, Arcs & Sectors</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                        Use the intuitive "pizza slice" analogy for finding sector areas, arc lengths, central angles, and inscribed angle rules.
+                    </p>
+
+                    <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-4 space-y-2">
+                        <h4 class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-list-check text-rose-600"></i> Key Lessons in this Unit:
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-rose-500 text-[10px]"></i> Lesson 6.1: Radius, Diameter, Circumference & Area</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-rose-500 text-[10px]"></i> Lesson 6.2: Central vs. Inscribed Angles</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-rose-500 text-[10px]"></i> Lesson 6.3: Sector Area (The Pizza Slice Formula)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-rose-500 text-[10px]"></i> Lesson 6.4: Arc Length & Tangent Line Rules</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
+                        <span class="text-slate-400 font-mono">4 Lessons &bull; Pizza Slice Rule</span>
+                        <button onclick="toggleLessonDrawer('drawer-6')" class="font-bold text-rose-700 hover:text-rose-800 transition flex items-center gap-1">
+                            <span>View Quick Lesson Breakdown</span> <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+                    </div>
+
+                    <div id="drawer-6" class="hidden mt-4 pt-4 border-t border-slate-200 space-y-3 text-xs">
+                        <div class="p-3 bg-rose-50/70 rounded-xl border border-rose-100">
+                            <strong class="text-rose-900 block mb-1">🍕 Sector Area Analogy</strong>
+                            <p class="text-slate-700">Sector Area = (Angle / 360°) × πr². You're just taking a fraction of the total circle area!</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- NO SEARCH RESULTS BOX -->
+                <div id="no-search-results" class="hidden text-center py-12 bg-white rounded-3xl border border-slate-200">
+                    <i class="fa-solid fa-magnifying-glass text-3xl text-slate-300 mb-2"></i>
+                    <h3 class="text-base font-bold text-slate-700">No matching geometry units found</h3>
+                    <p class="text-xs text-slate-400">Try searching for terms like "transversal", "proof", "trig", "SOH CAH TOA", or "circle".</p>
+                    <button onclick="clearSearch()" class="mt-3 px-4 py-1.5 bg-teal-50 text-teal-700 font-bold text-xs rounded-xl hover:bg-teal-100 transition">
+                        Clear Search Filter
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDEBAR: INTERACTIVE WIDGETS & ADS (4 COLS) -->
+            <aside class="lg:col-span-4 space-y-6">
+                
+                <!-- INTERACTIVE WIDGET 1: TRANSVERSAL ANGLE CALCULATOR -->
+                <div class="bg-white rounded-3xl p-5 border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center gap-2 pb-3 border-b border-slate-100">
+                        <div class="w-8 h-8 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xs font-extrabold text-slate-900 uppercase tracking-wider">Transversal Angle Tool</h3>
+                            <span class="text-[10px] text-slate-400 font-semibold">Unit 1 Live Visualizer</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Adjust the slider for Angle 1 to see how all 8 transversal angles update in real time!
+                    </p>
+
+                    <!-- SLIDER CONTROL -->
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-xs font-bold text-slate-700">
+                            <span>Angle 1 (Obtuse / Acute):</span>
+                            <span id="transversal-slider-val" class="font-mono text-teal-600">120°</span>
+                        </div>
+                        <input type="range" id="transversal-slider" min="30" max="150" value="120" oninput="updateTransversalWidget()" class="w-full accent-teal-600 cursor-pointer">
+                    </div>
+
+                    <!-- LIVE ANGLE READOUT GRID -->
+                    <div class="grid grid-cols-2 gap-2 text-center font-mono text-xs">
+                        <div class="p-2.5 rounded-xl bg-slate-900 text-white">
+                            <span class="text-[9px] text-slate-400 block font-sans">BIG ANGLES</span>
+                            <span id="big-angle-val" class="font-bold text-teal-400 text-base">120°</span>
+                            <span class="text-[9px] text-slate-400 block font-sans mt-0.5">∠1, ∠4, ∠5, ∠8</span>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-teal-50 border border-teal-200 text-teal-900">
+                            <span class="text-[9px] text-slate-500 block font-sans">SMALL ANGLES</span>
+                            <span id="small-angle-val" class="font-bold text-teal-700 text-base">60°</span>
+                            <span class="text-[9px] text-slate-500 block font-sans mt-0.5">∠2, ∠3, ∠6, ∠7</span>
+                        </div>
+                    </div>
+
+                    <div class="p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-[11px] font-medium flex items-center justify-between">
+                        <span>Big Angle + Small Angle</span>
+                        <span class="font-bold font-mono text-amber-800">Sum = 180°</span>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR ADVERTISEMENT SLOT (300x250) -->
+                <div id="ad-sidebar-1" class="ad-placeholder w-full h-[250px] border-2 border-dashed border-slate-300 rounded-3xl flex flex-col items-center justify-center p-4 text-center">
+                    <div class="bg-slate-200 text-slate-600 text-[9px] font-bold px-1.5 py-0.5 rounded mb-2">ADVERTISEMENT</div>
+                    <i class="fa-solid fa-rectangle-ad text-2xl text-slate-400 mb-1"></i>
+                    <span class="text-xs font-mono font-bold text-slate-600">Sidebar Ad Slot (300 x 250)</span>
+                </div>
+
+                <!-- WIDGET 2: PROOF REASON QUICK SEARCH -->
+                <div class="bg-white rounded-3xl p-5 border border-slate-200 shadow-sm space-y-3">
+                    <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+                        <div class="w-8 h-8 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <h3 class="text-xs font-extrabold text-slate-900 uppercase tracking-wider">Proof Reason Finder</h3>
+                    </div>
+
+                    <input type="text" id="sidebar-proof-search" onkeyup="searchSidebarProof()" placeholder="Type 'midpoint', 'vertical', 'CPCTC'..." class="w-full px-3 py-2 text-xs rounded-xl border border-slate-200">
+
+                    <div id="sidebar-proof-results" class="space-y-2 max-h-48 overflow-y-auto text-xs pr-1">
+                        <div class="p-2 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong class="text-purple-700 block">CPCTC</strong>
+                            <span class="text-slate-600 text-[11px]">Corresponding parts of congruent triangles are congruent.</span>
+                        </div>
+                        <div class="p-2 bg-slate-50 rounded-xl border border-slate-200">
+                            <strong class="text-purple-700 block">Reflexive Property</strong>
+                            <span class="text-slate-600 text-[11px]">A side or angle is equal to itself (e.g. AB ≅ AB).</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STICKY CHEAT SHEET CALL-TO-ACTION -->
+                <div class="bg-gradient-to-br from-teal-600 to-teal-800 text-white rounded-3xl p-5 shadow-md space-y-3 sticky top-20">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-bolt text-amber-300 text-lg"></i>
+                        <h4 class="text-sm font-bold">Printable Geometry Survival Sheet</h4>
+                    </div>
+                    <p class="text-xs text-teal-100 leading-relaxed">
+                        Keep all rules, formulas, and proof definitions right next to your textbook.
+                    </p>
+                    <a href="geometry-cheat-sheet.html" class="block w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl text-center shadow-sm transition">
+                        Open Cheat Sheet Page &rarr;
+                    </a>
+                </div>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- FOOTER NAVIGATION -->
+    <footer class="bg-slate-900 text-slate-400 pt-10 pb-8 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                
+                <!-- BRAND INFO -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-teal-600 text-white flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-shapes text-sm"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white tracking-tight">Proofing<span class="text-teal-400">Math</span></span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Built for high school students tackling core math. Clear explanations, zero fluff, and visual shortcuts.
+                    </p>
+                </div>
+
+                <!-- SUBJECT LINKS -->
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-wider text-white mb-3">Core High School Subjects</h5>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="geometry.html" class="text-teal-400 font-bold">High School Geometry Hub</a></li>
+                        <li><a href="geometry-cheat-sheet.html" class="hover:text-teal-300 transition">Geometry Master Cheat Sheet</a></li>
+                        <li><a href="algebra.html" class="hover:text-teal-300 transition">Algebra I</a></li>
+                        <li><a href="advanced-algebra.html" class="hover:text-teal-300 transition">Advanced Algebra</a></li>
+                        <li><a href="amdm.html" class="hover:text-teal-300 transition">AMDM</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT & SPONSOR INFO -->
+                <div>
+                    <h5 class="text-xs font-bold uppercase tracking-wider text-white mb-3">Sponsors & Ads</h5>
+                    <p class="text-xs text-slate-400 mb-2">Interested in advertising on Proofing Math?</p>
+                    <a href="mailto:ads@proofingmath.com" class="text-xs text-teal-400 hover:underline font-mono">ads@proofingmath.com</a>
+                </div>
+
+            </div>
+
+            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+                <p>&copy; <span id="year-span"></span> Proofing Math. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                    <a href="#" class="hover:underline">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year-span').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle logic
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Toggle Expandable Lesson Drawers
+        function toggleLessonDrawer(drawerId) {
+            const drawer = document.getElementById(drawerId);
+            drawer.classList.toggle('hidden');
+        }
+
+        // -------------------------------------------------------------
+        // LIVE INSTANT SEARCH FILTER FOR GEOMETRY UNITS
+        // -------------------------------------------------------------
+        function filterUnits() {
+            const query = document.getElementById('unit-search').value.toLowerCase().trim();
+            const units = document.querySelectorAll('.unit-card');
+            const clearBtn = document.getElementById('clear-search-btn');
+            let visibleCount = 0;
+
+            if (query.length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+
+            units.forEach(unit => {
+                const keywords = unit.getAttribute('data-keywords') || '';
+                const text = unit.innerText.toLowerCase();
+
+                if (keywords.includes(query) || text.includes(query)) {
+                    unit.style.display = '';
+                    visibleCount++;
+                } else {
+                    unit.style.display = 'none';
+                }
+            });
+
+            // Toggle No Results Box
+            const noResults = document.getElementById('no-search-results');
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        function clearSearch() {
+            document.getElementById('unit-search').value = '';
+            filterUnits();
+        }
+
+        // -------------------------------------------------------------
+        // TRANSVERSAL ANGLE CALCULATOR WIDGET LOGIC
+        // -------------------------------------------------------------
+        function updateTransversalWidget() {
+            const angleVal = parseInt(document.getElementById('transversal-slider').value) || 120;
+            document.getElementById('transversal-slider-val').textContent = angleVal + '°';
+
+            const bigAngle = angleVal >= 90 ? angleVal : (180 - angleVal);
+            const smallAngle = 180 - bigAngle;
+
+            document.getElementById('big-angle-val').textContent = bigAngle + '°';
+            document.getElementById('small-angle-val').textContent = smallAngle + '°';
+        }
+
+        // -------------------------------------------------------------
+        // SIDEBAR PROOF REASON QUICK SEARCH
+        // -------------------------------------------------------------
+        function searchSidebarProof() {
+            const input = document.getElementById('sidebar-proof-search').value.toLowerCase();
+            const items = document.getElementById('sidebar-proof-results').getElementsByTagName('div');
+            for (let i = 0; i < items.length; i++) {
+                const text = items[i].textContent || items[i].innerText;
+                items[i].style.display = text.toLowerCase().includes(input) ? '' : 'none';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -57,22 +57,22 @@
         }
     </script>
     <style>
-        /* Soft, minimal background grid pattern */
+        /* Minimal background grid pattern */
         .math-grid-bg {
             background-color: #f8fafc;
             background-image: radial-gradient(#cbd5e1 0.75px, transparent 0.75px);
             background-size: 24px 24px;
         }
 
-        /* Clean Glass & Soft Border styling */
+        /* Glass Card & Border styling */
         .glass-card {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.94);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             border: 1px solid #e2e8f0;
         }
 
-        /* Clean Ad Placeholder Border */
+        /* Ad Placeholder Styling */
         .ad-placeholder {
             background: #f1f5f9;
             background-image: repeating-linear-gradient(
@@ -101,18 +101,18 @@
 
     <!-- TOP ANNOUNCEMENT BANNER -->
     <div class="bg-slate-900 text-white text-xs sm:text-sm py-2 px-4 text-center flex items-center justify-center gap-2 font-medium">
-        <span class="bg-teal-400 text-slate-950 px-2 py-0.5 rounded-full font-bold text-xs uppercase tracking-wider">New</span>
+        <span class="bg-teal-400 text-slate-950 px-2 py-0.5 rounded-full font-bold text-[10px] uppercase tracking-wider">New</span>
         <span>High School Geometry Core & Interactive Triangle Lab is Live!</span>
         <a href="geometry.html" class="underline hover:text-teal-300 transition ml-1 font-semibold">Start Learning &rarr;</a>
     </div>
 
     <!-- MAIN HEADER NAVIGATION -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             
             <!-- BRAND LOGO -->
             <a href="index.html" class="flex items-center gap-2.5 group">
-                <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-sm group-hover:bg-brand-700 transition">
+                <div class="w-9 h-9 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-sm group-hover:bg-brand-700 transition">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <polygon points="3 20 21 20 12 4 3 20"></polygon>
                         <path d="M9 14l2 2 4-4"></path>
@@ -128,29 +128,29 @@
 
             <!-- DESKTOP NAVIGATION BUTTONS -->
             <nav class="hidden md:flex items-center gap-1.5">
-                <a href="geometry.html" class="px-3.5 py-2 rounded-xl text-xs font-bold text-brand-700 bg-indigo-50 hover:bg-indigo-100 transition flex items-center gap-2 border border-indigo-100">
+                <a href="geometry.html" class="px-3 py-1.5 rounded-xl text-xs font-bold text-brand-700 bg-indigo-50 hover:bg-indigo-100 transition flex items-center gap-2 border border-indigo-100">
                     <i class="fa-solid fa-shapes text-brand-600"></i> Geometry
                 </a>
-                <a href="algebra.html" class="px-3.5 py-2 rounded-xl text-xs font-bold text-slate-700 hover:bg-slate-100 transition flex items-center gap-2">
+                <a href="algebra.html" class="px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 hover:bg-slate-100 transition flex items-center gap-2">
                     <i class="fa-solid fa-calculator text-emerald-600"></i> Algebra I
                 </a>
-                <a href="advanced-algebra.html" class="px-3.5 py-2 rounded-xl text-xs font-bold text-slate-700 hover:bg-slate-100 transition flex items-center gap-2">
+                <a href="advanced-algebra.html" class="px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 hover:bg-slate-100 transition flex items-center gap-2">
                     <i class="fa-solid fa-chart-line text-purple-600"></i> Advanced Algebra
                 </a>
-                <a href="amdm.html" class="px-3.5 py-2 rounded-xl text-xs font-bold text-slate-700 hover:bg-slate-100 transition flex items-center gap-2">
+                <a href="amdm.html" class="px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 hover:bg-slate-100 transition flex items-center gap-2">
                     <i class="fa-solid fa-dice text-amber-600"></i> AMDM
                 </a>
             </nav>
 
             <!-- RIGHT HEADER ACTIONS -->
             <div class="hidden sm:flex items-center gap-3">
-                <a href="geometry.html" class="px-4 py-2 rounded-xl text-xs font-bold bg-brand-600 hover:bg-brand-700 text-white shadow-sm transition">
-                    Jump to Lessons
+                <a href="geometry-cheat-sheet.html" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-900 hover:bg-brand-600 text-white shadow-sm transition">
+                    📄 Cheat Sheets
                 </a>
             </div>
 
             <!-- MOBILE MENU BUTTON -->
-            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Navigation">
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Navigation">
                 <i class="fa-solid fa-bars text-lg"></i>
             </button>
         </div>
@@ -158,7 +158,7 @@
         <!-- MOBILE MENU DRAWER -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2 shadow-lg">
             <a href="geometry.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-bold bg-indigo-50 text-brand-700">
-                <i class="fa-solid fa-shapes text-brand-600 w-5"></i> Geometry (Featured)
+                <i class="fa-solid fa-shapes text-brand-600 w-5"></i> Geometry (Featured Core)
             </a>
             <a href="algebra.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50">
                 <i class="fa-solid fa-calculator text-emerald-600 w-5"></i> Algebra I
@@ -169,28 +169,31 @@
             <a href="amdm.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50">
                 <i class="fa-solid fa-dice text-amber-600 w-5"></i> AMDM
             </a>
+            <a href="geometry-cheat-sheet.html" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-900 bg-slate-100">
+                <i class="fa-solid fa-file-pdf text-rose-600 w-5"></i> Formula Cheat Sheets
+            </a>
         </div>
     </header>
 
-    <!-- TOP LEADERBOARD ADVERTISEMENT SLOT (728x90 standard format) -->
+    <!-- TOP LEADERBOARD ADVERTISEMENT SLOT (728x90) -->
     <div class="max-w-7xl mx-auto px-4 pt-6 w-full flex justify-center">
-        <div id="ad-leaderboard-top" class="ad-placeholder w-full max-w-[728px] h-[90px] border-2 border-dashed border-indigo-200 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden group hover:border-brand-400 transition">
-            <div class="absolute top-1 right-2 bg-slate-200 text-slate-600 text-[10px] font-bold px-1.5 py-0.5 rounded">ADVERTISEMENT</div>
+        <div id="ad-leaderboard-top" class="ad-placeholder w-full max-w-[728px] h-[90px] border-2 border-dashed border-slate-300 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden group hover:border-brand-400 transition">
+            <div class="absolute top-1.5 right-2 bg-slate-200 text-slate-500 text-[9px] font-bold px-1.5 py-0.5 rounded uppercase">ADVERTISEMENT</div>
             <div class="flex items-center gap-2 text-slate-400 font-mono text-xs font-semibold">
-                <i class="fa-solid fa-rectangle-ad text-base text-indigo-400"></i>
+                <i class="fa-solid fa-rectangle-ad text-base text-brand-500"></i>
                 <span>Leaderboard Banner Ad Space (728 x 90)</span>
             </div>
-            <span class="text-[11px] text-slate-400">Replace this `&lt;div id="ad-leaderboard-top"&gt;` with your Google AdSense tag</span>
+            <span class="text-[10px] text-slate-400 mt-0.5">Google AdSense / Sponsor Script Location</span>
         </div>
     </div>
 
     <!-- HERO SECTION WITH INTERACTIVE GEOMETRY CANVAS -->
-    <section class="relative py-8 md:py-14 overflow-hidden">
+    <section class="relative py-8 md:py-12 overflow-hidden">
         
         <!-- Floating Math Accent Shapes -->
-        <div class="absolute top-10 left-5 text-indigo-200 text-3xl font-mono font-bold animate-float select-none">π</div>
-        <div class="absolute bottom-10 left-1/3 text-violet-200 text-4xl font-mono font-bold animate-float-delayed select-none">a² + b² = c²</div>
-        <div class="absolute top-20 right-10 text-amber-200 text-3xl font-mono font-bold animate-float select-none">√x</div>
+        <div class="absolute top-6 left-5 text-indigo-200 text-3xl font-mono font-bold animate-float select-none">π</div>
+        <div class="absolute bottom-6 left-1/3 text-purple-200 text-3xl font-mono font-bold animate-float-delayed select-none">a² + b² = c²</div>
+        <div class="absolute top-12 right-8 text-amber-200 text-3xl font-mono font-bold animate-float select-none">√x</div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -198,17 +201,17 @@
                 <!-- HERO TEXT COLUMN (7 cols) -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-brand-50 to-purple-50 border border-brand-200/80 text-brand-700 text-xs font-bold shadow-sm">
-                        <span class="w-2 h-2 rounded-full bg-accent-emerald animate-pulse"></span>
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                         High School Core Math Simplified
                     </div>
 
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
                         Math Made Simple. <br>
-                        <span class="bg-gradient-to-r from-brand-600 via-accent-violet to-accent-rose bg-clip-text text-transparent">Zero Textbook Fluff.</span>
+                        <span class="bg-gradient-to-r from-brand-600 via-purple-600 to-rose-600 bg-clip-text text-transparent">Zero Textbook Fluff.</span>
                     </h1>
 
                     <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                        Stuck on Geometry proofs or trig formulas? We break down core high school math into visual shortcuts, 5-minute explanations, and real-life examples that actually make sense.
+                        Stuck on Geometry proofs or trig formulas? We break down core high school math into visual shortcuts, 5-minute explanations, and interactive labs that actually make sense.
                     </p>
 
                     <!-- QUICK BUTTON ACTIONS -->
@@ -262,7 +265,7 @@
 
                         <!-- Canvas Box -->
                         <div class="relative bg-slate-900 rounded-2xl overflow-hidden shadow-inner flex items-center justify-center">
-                            <canvas id="hero-triangle-canvas" width="400" height="300" class="w-full h-auto cursor-grab active:cursor-grabbing touch-none"></canvas>
+                            <canvas id="hero-triangle-canvas" width="400" height="260" class="w-full h-auto cursor-grab active:cursor-grabbing touch-none"></canvas>
                         </div>
 
                         <!-- Live Triangle Stats readout -->
@@ -294,90 +297,6 @@
     </section>
 
     <!-- MAIN TWO-COLUMN CONTAINER (CONTENT + SIDEBAR ADS) -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            
-            <!-- LEFT MAIN CONTENT COLUMN (8 COLS) -->
-            <div class="lg:col-span-8 space-y-12">
-                
-                <!-- SECTION 1: CORE COURSES GRID -->
-                <section id="courses-grid" class="scroll-mt-28">
-                    <div class="flex items-center justify-between mb-6">
-                        <div>
-                            <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">Core High School Math Courses</h2>
-                            <p class="text-xs sm:text-sm text-slate-500">Pick what you're working on in class today.</p>
-                        </div>
-                        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-3 py-1 rounded-full">High School Core</span>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                        
-                        <!-- CARD 1: GEOMETRY (PRIMARY FEATURED) -->
-                        <div class="glass-card rounded-3xl p-6 border-2 border-brand-500/30 hover:border-brand-500 transition-all duration-300 shadow-md hover:shadow-xl relative flex flex-col justify-between group">
-                            <div class="absolute -top-3 right-5 bg-gradient-to-r from-brand-600 to-accent-violet text-white text-[10px] font-extrabold tracking-wider uppercase px-3 py-1 rounded-full shadow-sm">
-                                High Demand 🔥
-                            </div>
-                            <div>
-                                <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-brand-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-shapes"></i>
-                                </div>
-                                <h3 class="text-xl font-extrabold text-slate-900 mb-2">High School Geometry</h3>
-                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    Master two-column proofs, parallel line transversal angles, right triangle trigonometry (SOH CAH TOA), circles, and 3D volume without losing your mind.
-                                </p>
-                                <ul class="space-y-1.5 text-xs text-slate-600 font-medium mb-6">
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Two-Column Proof Survival Kit</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> SOH CAH TOA Visual Shortcuts</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Quadrilateral Properties Cheat Sheet</li>
-                                </ul>
-                            </div>
-                            <a href="geometry.html" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs text-center shadow-md shadow-brand-500/20 transition">
-                                Enter Geometry Module &rarr;
-                            </a>
-                        </div>
-
-                        <!-- CARD 2: ALGEBRA I -->
-                        <div class="glass-card rounded-3xl p-6 border border-slate-200 hover:border-accent-emerald transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between group">
-                            <div>
-                                <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-accent-emerald flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-calculator"></i>
-                                </div>
-                                <h3 class="text-xl font-extrabold text-slate-900 mb-2">Algebra I</h3>
-                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    Conquer linear equations, slope-intercept graphing, systems of equations, inequalities, and basic polynomial factoring with ease.
-                                </p>
-                                <ul class="space-y-1.5 text-xs text-slate-600 font-medium mb-6">
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Multi-Step Equation Solver Steps</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Graphing Slope-Intercept Secrets</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Factoring Trinomial Tricks</li>
-                                </ul>
-                            </div>
-                            <a href="algebra.html" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs text-center transition">
-                                Explore Algebra I &rarr;
-                            </a>
-                        </div>
-
-                        <!-- CARD 3: ADVANCED ALGEBRA -->
-                        <div class="glass-card rounded-3xl p-6 border border-slate-200 hover:border-accent-violet transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between group">
-                            <div>
-                                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-accent-violet flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-chart-line"></i>
-                                </div>
-                                <h3 class="text-xl font-extrabold text-slate-900 mb-2">Advanced Algebra / Alg II</h3>
-                                <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                                    Demystify quadratic formulas, complex numbers, logarithms, exponential growth, and radical functions step by step.
-                                </p>
-                                <ul class="space-y-1.5 text-xs text-slate-600 font-medium mb-6">
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Quadratic Formula Made Simple</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Logarithm Rules Cheat Sheet</li>
-                                </ul>
-                            </div>
-                            <a href="advanced-algebra.html" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs text-center transition">
-                                Explore Advanced Algebra &rarr;
-                            </a>
-                        </div>
-
-    <!-- MAIN TWO-COLUMN CONTAINER -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
             
@@ -467,124 +386,146 @@
 
                 <!-- MID-FEED ADVERTISEMENT SLOT -->
                 <div id="ad-infeed-middle" class="ad-placeholder w-full h-[90px] border border-dashed border-slate-300 rounded-2xl flex flex-col items-center justify-center relative p-3 text-center">
-                    <div class="absolute top-1.5 right-2 bg-slate-200 text-slate-500 text-[9px] font-bold px-1.5 py-0.5 rounded">ADVERTISEMENT</div>
+                    <div class="absolute top-1.5 right-2 bg-slate-200 text-slate-500 text-[9px] font-bold px-1.5 py-0.5 rounded uppercase">ADVERTISEMENT</div>
                     <span class="text-xs font-mono font-semibold text-slate-500">In-Feed Responsive Ad Slot (Google AdSense)</span>
                 </div>
 
-                <!-- SECTION 2: INTERACTIVE QUICK TOOLS -->
+                <!-- SECTION 2: INTERACTIVE QUICK TOOLS WIDGET -->
                 <section id="quick-tools" class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
                         <div>
                             <h2 class="text-lg font-bold text-slate-900">Interactive Math Helper</h2>
-                            <p class="text-xs text-slate-500">Test formulas on the fly.</p>
+                            <p class="text-xs text-slate-500">Test formulas & calculate answers on the fly.</p>
                         </div>
                         
+                        <!-- TAB BUTTONS -->
                         <div class="flex bg-slate-100 p-1 rounded-xl text-xs font-bold gap-1 self-start sm:self-auto">
-                            <button id="tab-btn-soh" onclick="switchToolTab('soh')" class="px-3 py-1 rounded-lg bg-white text-brand-600 shadow-sm transition">SOH CAH TOA</button>
-                            <button id="tab-btn-polygon" onclick="switchToolTab('polygon')" class="px-3 py-1 rounded-lg text-slate-600 transition">Polygon Angles</button>
-                            <button id="tab-btn-proof" onclick="switchToolTab('proof')" class="px-3 py-1 rounded-lg text-slate-600 transition">Proof Lookup</button>
+                            <button id="tab-btn-soh" onclick="switchToolTab('soh')" class="px-3 py-1.5 rounded-lg bg-white text-brand-600 shadow-sm transition">SOH CAH TOA</button>
+                            <button id="tab-btn-line" onclick="switchToolTab('line')" class="px-3 py-1.5 rounded-lg text-slate-600 hover:bg-white/50 transition">Slope & Line (y=mx+b)</button>
                         </div>
                     </div>
 
-                    <!-- TAB 1: SOH CAH TOA -->
+                    <!-- TAB 1: SOH CAH TOA SOLVER -->
                     <div id="tool-tab-soh" class="space-y-4">
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Opposite Side</label>
-                                <input type="number" id="trig-opp" value="3" class="w-full px-3 py-1.5 text-xs rounded-xl bg-slate-50 border border-slate-200 outline-none">
+                                <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Angle θ (°)</label>
+                                <input type="number" id="quick-soh-angle" value="35" min="1" max="89" oninput="runSohCalc()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Adjacent Side</label>
-                                <input type="number" id="trig-adj" value="4" class="w-full px-3 py-1.5 text-xs rounded-xl bg-slate-50 border border-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Hypotenuse (c)</label>
-                                <input type="number" id="trig-hyp" readonly value="5" class="w-full px-3 py-1.5 text-xs rounded-xl bg-indigo-50 border border-indigo-200 text-brand-700 font-mono font-bold">
+                                <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Hypotenuse Length</label>
+                                <input type="number" id="quick-soh-hyp" value="12" min="0.1" step="any" oninput="runSohCalc()" class="w-full p-2.5 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none">
                             </div>
                         </div>
 
-                        <div class="p-3 rounded-xl bg-slate-900 text-white font-mono text-xs grid grid-cols-3 gap-2 text-center">
+                        <div id="quick-soh-results" class="p-4 bg-brand-50/60 border border-brand-100 rounded-xl grid grid-cols-2 gap-3 font-mono text-xs">
                             <div>
-                                <span class="text-[10px] text-slate-400 block font-sans">sin(θ)</span>
-                                <span id="sin-val" class="text-teal-400 font-bold">0.6000</span>
+                                <span class="text-[10px] text-brand-700 font-sans uppercase font-bold block">Opposite Side</span>
+                                <span id="soh-opp-out" class="text-base font-extrabold text-brand-900">6.88</span>
                             </div>
                             <div>
-                                <span class="text-[10px] text-slate-400 block font-sans">cos(θ)</span>
-                                <span id="cos-val" class="text-teal-400 font-bold">0.8000</span>
-                            </div>
-                            <div>
-                                <span class="text-[10px] text-slate-400 block font-sans">tan(θ)</span>
-                                <span id="tan-val" class="text-teal-400 font-bold">0.7500</span>
+                                <span class="text-[10px] text-brand-700 font-sans uppercase font-bold block">Adjacent Side</span>
+                                <span id="soh-adj-out" class="text-base font-extrabold text-brand-900">9.83</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- TAB 2: POLYGON ANGLES -->
-                    <div id="tool-tab-polygon" class="hidden space-y-4">
-                        <div class="flex items-center gap-4">
-                            <label class="text-xs font-bold text-slate-700">Polygon Sides (n):</label>
-                            <input type="number" id="polygon-sides" min="3" max="50" value="5" onchange="calcPolygonAngles()" oninput="calcPolygonAngles()" class="w-20 px-3 py-1.5 text-xs rounded-xl bg-slate-50 border border-slate-200 font-bold text-brand-600">
-                        </div>
-                        <div class="p-3 rounded-xl bg-indigo-50 border border-indigo-100 grid grid-cols-2 gap-4 text-center">
+                    <!-- TAB 2: SLOPE & LINE SOLVER -->
+                    <div id="tool-tab-line" class="hidden space-y-4">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                             <div>
-                                <span class="text-xs text-slate-500">Total Interior Angle Sum</span>
-                                <div id="poly-sum" class="text-lg font-bold text-brand-700 font-mono">540°</div>
+                                <label class="block text-[10px] font-bold text-slate-700 uppercase mb-1">Point 1: x₁</label>
+                                <input type="number" id="line-x1" value="1" oninput="runLineCalc()" class="w-full p-2 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50">
                             </div>
                             <div>
-                                <span class="text-xs text-slate-500">Each Angle (Regular Polygon)</span>
-                                <div id="poly-each" class="text-lg font-bold text-emerald-600 font-mono">108°</div>
+                                <label class="block text-[10px] font-bold text-slate-700 uppercase mb-1">Point 1: y₁</label>
+                                <input type="number" id="line-y1" value="2" oninput="runLineCalc()" class="w-full p-2 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold text-slate-700 uppercase mb-1">Point 2: x₂</label>
+                                <input type="number" id="line-x2" value="4" oninput="runLineCalc()" class="w-full p-2 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold text-slate-700 uppercase mb-1">Point 2: y₂</label>
+                                <input type="number" id="line-y2" value="8" oninput="runLineCalc()" class="w-full p-2 border border-slate-300 rounded-lg text-xs font-bold bg-slate-50">
+                            </div>
+                        </div>
+
+                        <div id="line-results" class="p-4 bg-emerald-50/60 border border-emerald-100 rounded-xl grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
+                            <div>
+                                <span class="text-[10px] text-emerald-800 font-sans uppercase font-bold block">Slope (m)</span>
+                                <span id="line-m-out" class="text-sm font-extrabold text-emerald-950">2.00</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-emerald-800 font-sans uppercase font-bold block">Equation (y = mx + b)</span>
+                                <span id="line-eq-out" class="text-sm font-extrabold text-emerald-950">y = 2x + 0</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-emerald-800 font-sans uppercase font-bold block">Distance (d)</span>
+                                <span id="line-d-out" class="text-sm font-extrabold text-emerald-950">6.71</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- TAB 3: PROOF LOOKUP -->
-                    <div id="tool-tab-proof" class="hidden space-y-3">
-                        <input type="text" id="proof-search-input" onkeyup="searchProofTerms()" placeholder="Search terms (CPCTC, Alternate Interior, SAS)..." class="w-full px-3.5 py-2 text-xs rounded-xl border border-slate-200">
-                        <div id="proof-terms-list" class="space-y-2 max-h-40 overflow-y-auto pr-1">
-                            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200 text-xs">
-                                <span class="font-bold text-brand-700">CPCTC</span> &mdash; Corresponding Parts of Congruent Triangles are Congruent.
-                            </div>
-                            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200 text-xs">
-                                <span class="font-bold text-brand-700">Alternate Interior Angles</span> &mdash; Angles inside parallel lines on opposite sides of transversal are equal.
-                            </div>
-                            <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200 text-xs">
-                                <span class="font-bold text-brand-700">Vertical Angles Theorem</span> &mdash; Opposite angles formed by intersecting lines are always equal.
-                            </div>
+                </section>
+
+                <!-- SECTION 3: WHY PROOFING MATH WORKS -->
+                <section class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+                    <h2 class="text-lg font-bold text-slate-900">Why Students Use Proofing Math</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-brand-600 text-lg mb-2"><i class="fa-solid fa-brain"></i></div>
+                            <h3 class="font-bold text-slate-900 text-sm mb-1">Concept First</h3>
+                            <p class="text-slate-600 leading-relaxed">We explain <em>why</em> a formula works before making you memorize it.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-emerald-600 text-lg mb-2"><i class="fa-solid fa-gamepad"></i></div>
+                            <h3 class="font-bold text-slate-900 text-sm mb-1">Interactive Tools</h3>
+                            <p class="text-slate-600 leading-relaxed">Drag canvas points and test calculators to visually see math principles.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="text-purple-600 text-lg mb-2"><i class="fa-solid fa-mobile-screen"></i></div>
+                            <h3 class="font-bold text-slate-900 text-sm mb-1">Built for Phone & Desktop</h3>
+                            <p class="text-slate-600 leading-relaxed">Study anywhere on your phone during lunch or practice on a desktop.</p>
                         </div>
                     </div>
                 </section>
 
             </div>
 
-            <!-- RIGHT SIDEBAR COLUMN (ADS & DAILY TEASER) -->
+            <!-- RIGHT SIDEBAR COLUMN (4 COLS) -->
             <aside class="lg:col-span-4 space-y-6">
-                
-                <!-- SIDEBAR AD 1 -->
-                <div id="ad-sidebar-1" class="ad-placeholder w-full h-[250px] border border-dashed border-slate-300 rounded-2xl flex flex-col items-center justify-center p-4 text-center">
-                    <div class="bg-slate-200 text-slate-600 text-[9px] font-bold px-1.5 py-0.5 rounded mb-2">ADVERTISEMENT</div>
-                    <i class="fa-solid fa-rectangle-ad text-2xl text-slate-400 mb-1"></i>
-                    <span class="text-xs font-mono font-bold text-slate-600">Sidebar Ad Slot (300 x 250)</span>
+
+                <!-- SIDEBAR ADVERTISEMENT SLOT (300x250) -->
+                <div id="ad-sidebar-top" class="ad-placeholder w-full h-[250px] border-2 border-dashed border-slate-300 rounded-2xl flex flex-col items-center justify-center relative p-4 text-center group hover:border-brand-400 transition">
+                    <div class="absolute top-2 right-2 bg-slate-200 text-slate-500 text-[9px] font-bold px-1.5 py-0.5 rounded uppercase">ADVERTISEMENT</div>
+                    <i class="fa-solid fa-rectangle-ad text-2xl text-slate-400 mb-2"></i>
+                    <span class="text-xs font-mono font-bold text-slate-500">Medium Rectangle Ad</span>
+                    <span class="text-[10px] text-slate-400 mt-1">300 x 250 Google AdSense</span>
                 </div>
 
-                <!-- DAILY QUICK BRAIN TEASER -->
-                <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-3">
-                    <div class="flex items-center justify-between">
-                        <span class="text-[10px] font-bold text-white bg-indigo-600 px-2 py-0.5 rounded-full uppercase">Quick Teaser</span>
-                        <i class="fa-solid fa-lightbulb text-amber-400 text-sm"></i>
-                    </div>
-                    <h4 class="text-xs font-bold text-slate-900">What is the sum of interior angles of a 7-sided heptagon?</h4>
-                    <div class="pt-1 flex gap-2">
-                        <button onclick="checkTeaser(900)" class="w-full py-1.5 bg-slate-100 hover:bg-brand-50 hover:text-brand-600 rounded-xl text-xs font-bold transition">900°</button>
-                        <button onclick="checkTeaser(1080)" class="w-full py-1.5 bg-slate-100 hover:bg-brand-50 hover:text-brand-600 rounded-xl text-xs font-bold transition">1080°</button>
-                    </div>
-                    <div id="teaser-feedback" class="hidden text-xs font-bold text-center py-1 rounded-lg"></div>
+                <!-- QUICK CHEAT SHEET SHORTCUT CARD -->
+                <div class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white p-6 rounded-2xl shadow-md space-y-3">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-teal-400 bg-teal-950/80 px-2.5 py-0.5 rounded-full border border-teal-800">Fast Reference</span>
+                    <h3 class="text-lg font-bold text-white">Printable Formula Cheat Sheets</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Instant access to Geometry formulas, transversal rules, and right triangle shortcuts formatted for quick review.
+                    </p>
+                    <a href="geometry-cheat-sheet.html" class="block text-center w-full py-2.5 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs rounded-xl transition">
+                        Open Cheat Sheets &rarr;
+                    </a>
                 </div>
 
-                <!-- SIDEBAR AD 2 (STICKY) -->
-                <div id="ad-sidebar-2" class="ad-placeholder w-full h-[250px] border border-dashed border-slate-300 rounded-2xl flex flex-col items-center justify-center p-4 text-center sticky top-24">
-                    <div class="bg-slate-200 text-slate-600 text-[9px] font-bold px-1.5 py-0.5 rounded mb-2">ADVERTISEMENT</div>
-                    <i class="fa-solid fa-rectangle-ad text-2xl text-slate-400 mb-1"></i>
-                    <span class="text-xs font-mono font-bold text-slate-600">Sticky Ad Slot (300 x 250)</span>
+                <!-- MOTIVATIONAL STUDY TIP CARD -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex items-center gap-2 text-amber-500 text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-lightbulb"></i> Study Hack
+                    </div>
+                    <h4 class="font-extrabold text-slate-900 text-sm">The 2-Minute Proof Rule</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Stuck on a geometry proof? Write down all Given statements and their immediate definitions first. Over 70% of two-column proof steps come directly from definitions!
+                    </p>
                 </div>
 
             </aside>
@@ -592,266 +533,240 @@
         </div>
     </main>
 
-    <!-- CLEAN & SIMPLIFIED FOOTER (Popular Guides Removed) -->
-    <footer class="bg-slate-900 text-slate-300 pt-10 pb-8 mt-auto border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                
-                <!-- BRAND INFO -->
-                <div class="space-y-3">
-                    <div class="flex items-center gap-2">
-                        <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center font-bold">
-                            <i class="fa-solid fa-shapes text-sm"></i>
-                        </div>
-                        <span class="text-lg font-bold text-white tracking-tight">Proofing<span class="text-brand-400">Math</span></span>
-                    </div>
-                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
-                        Built for high school students tackling core math. Clear explanations, zero fluff, and visual shortcuts.
-                    </p>
-                </div>
-
-                <!-- NAVIGATION PAGES LINK COLUMN -->
-                <div>
-                    <h5 class="text-xs font-bold uppercase tracking-wider text-white mb-3">Core Subjects</h5>
-                    <ul class="space-y-2 text-xs text-slate-400">
-                        <li><a href="geometry.html" class="hover:text-teal-300 transition">High School Geometry</a></li>
-                        <li><a href="algebra.html" class="hover:text-teal-300 transition">Algebra I</a></li>
-                        <li><a href="advanced-algebra.html" class="hover:text-teal-300 transition">Advanced Algebra</a></li>
-                        <li><a href="amdm.html" class="hover:text-teal-300 transition">AMDM</a></li>
-                    </ul>
-                </div>
-
-                <!-- AD / CONTACT INFO -->
-                <div>
-                    <h5 class="text-xs font-bold uppercase tracking-wider text-white mb-3">Sponsors & Ads</h5>
-                    <p class="text-xs text-slate-400 mb-2">Interested in placing an ad on Proofing Math?</p>
-                    <a href="mailto:ads@proofingmath.com" class="text-xs text-teal-400 hover:underline font-mono">ads@proofingmath.com</a>
-                </div>
-
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-8 px-4 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-md bg-brand-500 text-white flex items-center justify-center font-black text-xs">P</div>
+                <span class="font-bold text-white">ProofingMath</span>
+                <span>&copy; 2026</span>
             </div>
-
-            <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
-                <p>&copy; <span id="year-span"></span> Proofing Math. All rights reserved.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="hover:underline">Privacy Policy</a>
-                    <a href="#" class="hover:underline">Terms of Service</a>
-                </div>
+            <div class="flex items-center gap-6 font-medium">
+                <a href="index.html" class="text-white font-semibold">Home</a>
+                <a href="geometry.html" class="hover:text-white transition">Geometry</a>
+                <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
             </div>
         </div>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
     <script>
-        // Set dynamic copyright year
-        document.getElementById('year-span').textContent = new Date().getFullYear();
+        // MOBILE MENU TOGGLE
+        function toggleMobileMenu() {
+            const drawer = document.getElementById('mobile-menu');
+            drawer.classList.toggle('hidden');
+        }
 
-        // Mobile Menu Toggle logic
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        // TOOL TABS SWITCHER
+        function switchToolTab(tab) {
+            const btnSoh = document.getElementById('tab-btn-soh');
+            const btnLine = document.getElementById('tab-btn-line');
+            const tabSoh = document.getElementById('tool-tab-soh');
+            const tabLine = document.getElementById('tool-tab-line');
 
-        // -------------------------------------------------------------
-        // HERO INTERACTIVE CANVAS GEOMETRY TRIANGLE WIDGET
-        // -------------------------------------------------------------
+            if (tab === 'soh') {
+                btnSoh.className = 'px-3 py-1.5 rounded-lg bg-white text-brand-600 shadow-sm transition';
+                btnLine.className = 'px-3 py-1.5 rounded-lg text-slate-600 hover:bg-white/50 transition';
+                tabSoh.classList.remove('hidden');
+                tabLine.classList.add('hidden');
+                runSohCalc();
+            } else {
+                btnLine.className = 'px-3 py-1.5 rounded-lg bg-white text-brand-600 shadow-sm transition';
+                btnSoh.className = 'px-3 py-1.5 rounded-lg text-slate-600 hover:bg-white/50 transition';
+                tabLine.classList.remove('hidden');
+                tabSoh.classList.add('hidden');
+                runLineCalc();
+            }
+        }
+
+        // SOH CAH TOA QUICK CALCULATOR
+        function runSohCalc() {
+            const angle = parseFloat(document.getElementById('quick-soh-angle').value) || 35;
+            const hyp = parseFloat(document.getElementById('quick-soh-hyp').value) || 12;
+            const rad = angle * (Math.PI / 180);
+
+            const opp = hyp * Math.sin(rad);
+            const adj = hyp * Math.cos(rad);
+
+            document.getElementById('soh-opp-out').innerText = opp.toFixed(2);
+            document.getElementById('soh-adj-out').innerText = adj.toFixed(2);
+        }
+
+        // SLOPE & LINE QUICK CALCULATOR
+        function runLineCalc() {
+            const x1 = parseFloat(document.getElementById('line-x1').value) || 0;
+            const y1 = parseFloat(document.getElementById('line-y1').value) || 0;
+            const x2 = parseFloat(document.getElementById('line-x2').value) || 0;
+            const y2 = parseFloat(document.getElementById('line-y2').value) || 0;
+
+            const dx = x2 - x1;
+            const dy = y2 - y1;
+
+            if (dx === 0) {
+                document.getElementById('line-m-out').innerText = 'Undefined';
+                document.getElementById('line-eq-out').innerText = `x = ${x1}`;
+                document.getElementById('line-d-out').innerText = Math.abs(dy).toFixed(2);
+                return;
+            }
+
+            const m = dy / dx;
+            const b = y1 - m * x1;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            document.getElementById('line-m-out').innerText = m.toFixed(2);
+            document.getElementById('line-eq-out').innerText = `y = ${m.toFixed(2)}x ${b >= 0 ? '+ ' + b.toFixed(2) : '- ' + Math.abs(b).toFixed(2)}`;
+            document.getElementById('line-d-out').innerText = dist.toFixed(2);
+        }
+
+        // HTML5 CANVAS DRAGGABLE TRIANGLE LAB
         const canvas = document.getElementById('hero-triangle-canvas');
         const ctx = canvas.getContext('2d');
 
-        // Draggable triangle points
-        let points = [
-            { x: 70, y: 220, label: 'A' },
-            { x: 330, y: 220, label: 'B' },
-            { x: 200, y: 60, label: 'C' }
+        // Initial vertices
+        let pts = [
+            { x: 90,  y: 200, label: 'A' },
+            { x: 310, y: 200, label: 'B' },
+            { x: 200, y: 50,  label: 'C' }
         ];
 
-        let draggedPoint = null;
-        const pointRadius = 14;
-
-        function drawTriangle() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw grid background on canvas
-            ctx.strokeStyle = '#1e293b';
-            ctx.lineWidth = 1;
-            for(let x = 0; x < canvas.width; x += 25) {
-                ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
-            }
-            for(let y = 0; y < canvas.height; y += 25) {
-                ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
-            }
-
-            // Fill & Stroke Triangle
-            ctx.beginPath();
-            ctx.moveTo(points[0].x, points[0].y);
-            ctx.lineTo(points[1].x, points[1].y);
-            ctx.lineTo(points[2].x, points[2].y);
-            ctx.closePath();
-
-            // Indigo fill gradient
-            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-            gradient.addColorStop(0, 'rgba(99, 102, 241, 0.35)');
-            gradient.addColorStop(1, 'rgba(139, 92, 246, 0.2)');
-            ctx.fillStyle = gradient;
-            ctx.fill();
-
-            ctx.strokeStyle = '#818cf8';
-            ctx.lineWidth = 3;
-            ctx.stroke();
-
-            // Calculate sides
-            const c = dist(points[0], points[1]); // AB
-            const a = dist(points[1], points[2]); // BC
-            const b = dist(points[2], points[0]); // CA
-
-            // Calculate angles in degrees
-            const angleA = Math.acos(clamp((b*b + c*c - a*a) / (2 * b * c), -1, 1)) * (180 / Math.PI);
-            const angleB = Math.acos(clamp((a*a + c*c - b*b) / (2 * a * c), -1, 1)) * (180 / Math.PI);
-            const angleC = 180 - angleA - angleB;
-
-            // Update DOM readouts
-            document.getElementById('angle-a-val').textContent = angleA.toFixed(1) + '°';
-            document.getElementById('angle-b-val').textContent = angleB.toFixed(1) + '°';
-            document.getElementById('angle-c-val').textContent = angleC.toFixed(1) + '°';
-
-            // Draw Vertices
-            points.forEach((p, idx) => {
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, pointRadius, 0, Math.PI * 2);
-                ctx.fillStyle = idx === 0 ? '#f43f5e' : (idx === 1 ? '#10b981' : '#f59e0b');
-                ctx.fill();
-                ctx.strokeStyle = '#ffffff';
-                ctx.lineWidth = 2.5;
-                ctx.stroke();
-
-                // Point Label
-                ctx.fillStyle = '#ffffff';
-                ctx.font = 'bold 12px Plus Jakarta Sans';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                ctx.fillText(p.label, p.x, p.y);
-            });
-        }
-
-        function dist(p1, p2) {
-            return Math.hypot(p2.x - p1.x, p2.y - p1.y);
-        }
-
-        function clamp(val, min, max) {
-            return Math.max(min, Math.min(max, val));
-        }
+        let activeIndex = -1;
 
         function getMousePos(e) {
             const rect = canvas.getBoundingClientRect();
             const clientX = e.touches ? e.touches[0].clientX : e.clientX;
             const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+
             return {
-                x: (clientX - rect.left) * (canvas.width / rect.width),
-                y: (clientY - rect.top) * (canvas.height / rect.height)
+                x: (clientX - rect.left) * scaleX,
+                y: (clientY - rect.top) * scaleY
             };
         }
 
-        function startDrag(e) {
+        function dist(p1, p2) {
+            return Math.hypot(p1.x - p2.x, p1.y - p2.y);
+        }
+
+        function calculateAngles() {
+            const a = dist(pts[1], pts[2]); // side a opposite A
+            const b = dist(pts[0], pts[2]); // side b opposite B
+            const c = dist(pts[0], pts[1]); // side c opposite C
+
+            // Law of Cosines
+            let radA = Math.acos((b*b + c*c - a*a) / (2 * b * c)) || 0;
+            let radB = Math.acos((a*a + c*c - b*b) / (2 * a * c)) || 0;
+            let radC = Math.acos((a*a + b*b - c*c) / (2 * a * b)) || 0;
+
+            let degA = radA * (180 / Math.PI);
+            let degB = radB * (180 / Math.PI);
+            let degC = radC * (180 / Math.PI);
+
+            // Normalize so sum equals 180.0
+            const total = degA + degB + degC;
+            if (total > 0) {
+                degA = (degA / total) * 180;
+                degB = (degB / total) * 180;
+                degC = 180 - (degA + degB);
+            }
+
+            document.getElementById('angle-a-val').innerText = degA.toFixed(1) + '°';
+            document.getElementById('angle-b-val').innerText = degB.toFixed(1) + '°';
+            document.getElementById('angle-c-val').innerText = degC.toFixed(1) + '°';
+        }
+
+        function drawTriangle() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Background Grid Lines inside Canvas
+            ctx.strokeStyle = '#1e293b';
+            ctx.lineWidth = 1;
+            for (let x = 0; x < canvas.width; x += 20) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, canvas.height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < canvas.height; y += 20) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+                ctx.stroke();
+            }
+
+            // Draw Filled Triangle
+            ctx.beginPath();
+            ctx.moveTo(pts[0].x, pts[0].y);
+            ctx.lineTo(pts[1].x, pts[1].y);
+            ctx.lineTo(pts[2].x, pts[2].y);
+            ctx.closePath();
+
+            ctx.fillStyle = 'rgba(99, 102, 241, 0.25)';
+            ctx.fill();
+            ctx.strokeStyle = '#818cf8';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            // Draw Vertices
+            pts.forEach((pt, idx) => {
+                ctx.beginPath();
+                ctx.arc(pt.x, pt.y, 10, 0, Math.PI * 2);
+                ctx.fillStyle = activeIndex === idx ? '#38bdf8' : '#6366f1';
+                ctx.fill();
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Text Labels
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 12px Plus Jakarta Sans, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(pt.label, pt.x, pt.y - 18);
+            });
+
+            calculateAngles();
+        }
+
+        // EVENT LISTENERS FOR DRAGGING
+        function handleStart(e) {
             const pos = getMousePos(e);
-            points.forEach(p => {
-                if (dist(pos, p) < pointRadius * 1.5) {
-                    draggedPoint = p;
+            pts.forEach((pt, idx) => {
+                if (Math.hypot(pt.x - pos.x, pt.y - pos.y) < 22) {
+                    activeIndex = idx;
                 }
             });
         }
 
-        function moveDrag(e) {
-            if (draggedPoint) {
+        function handleMove(e) {
+            if (activeIndex !== -1) {
                 const pos = getMousePos(e);
-                // Clamp within canvas boundaries
-                draggedPoint.x = clamp(pos.x, 20, canvas.width - 20);
-                draggedPoint.y = clamp(pos.y, 20, canvas.height - 20);
+                // Clamp inside canvas border
+                pts[activeIndex].x = Math.max(20, Math.min(canvas.width - 20, pos.x));
+                pts[activeIndex].y = Math.max(20, Math.min(canvas.height - 20, pos.y));
                 drawTriangle();
             }
         }
 
-        function stopDrag() {
-            draggedPoint = null;
+        function handleEnd() {
+            activeIndex = -1;
         }
 
-        canvas.addEventListener('mousedown', startDrag);
-        canvas.addEventListener('mousemove', moveDrag);
-        window.addEventListener('mouseup', stopDrag);
+        canvas.addEventListener('mousedown', handleStart);
+        canvas.addEventListener('mousemove', handleMove);
+        window.addEventListener('mouseup', handleEnd);
 
-        canvas.addEventListener('touchstart', startDrag, { passive: true });
-        canvas.addEventListener('touchmove', moveDrag, { passive: true });
-        window.addEventListener('touchend', stopDrag);
+        canvas.addEventListener('touchstart', handleStart, { passive: true });
+        canvas.addEventListener('touchmove', handleMove, { passive: true });
+        window.addEventListener('touchend', handleEnd);
 
-        // Initial Canvas Render
-        drawTriangle();
-
-        // -------------------------------------------------------------
-        // QUICK TOOLS INTERACTIVE TABS & CALCULATORS
-        // -------------------------------------------------------------
-        function switchToolTab(tab) {
-            ['soh', 'polygon', 'proof'].forEach(t => {
-                document.getElementById(`tool-tab-${t}`).classList.add('hidden');
-                document.getElementById(`tab-btn-${t}`).className = "px-3 py-1.5 rounded-xl text-slate-600 hover:text-slate-900 transition";
-            });
-            document.getElementById(`tool-tab-${tab}`).classList.remove('hidden');
-            document.getElementById(`tab-btn-${tab}`).className = "px-3 py-1.5 rounded-xl bg-white text-brand-600 shadow-sm font-bold transition";
-        }
-
-        // SOH CAH TOA Calculation
-        const oppInput = document.getElementById('trig-opp');
-        const adjInput = document.getElementById('trig-adj');
-        const hypInput = document.getElementById('trig-hyp');
-
-        function updateTrig() {
-            const opp = parseFloat(oppInput.value) || 0;
-            const adj = parseFloat(adjInput.value) || 0;
-            const hyp = Math.sqrt(opp * opp + adj * adj);
-            hypInput.value = hyp.toFixed(2);
-
-            if (hyp > 0) {
-                document.getElementById('sin-val').textContent = (opp / hyp).toFixed(4);
-                document.getElementById('cos-val').textContent = (adj / hyp).toFixed(4);
-                document.getElementById('tan-val').textContent = adj !== 0 ? (opp / adj).toFixed(4) : 'Undefined';
-            }
-        }
-        oppInput.addEventListener('input', updateTrig);
-        adjInput.addEventListener('input', updateTrig);
-        updateTrig();
-
-        // Polygon Angle Calculation
-        function calcPolygonAngles() {
-            const n = parseInt(document.getElementById('polygon-sides').value) || 3;
-            if (n >= 3) {
-                const sum = (n - 2) * 180;
-                const each = sum / n;
-                document.getElementById('poly-sum').textContent = sum + '°';
-                document.getElementById('poly-each').textContent = each.toFixed(1) + '°';
-            }
-        }
-
-        // Proof Search Filter
-        function searchProofTerms() {
-            const input = document.getElementById('proof-search-input').value.toLowerCase();
-            const items = document.getElementById('proof-terms-list').getElementsByTagName('div');
-            for (let i = 0; i < items.length; i++) {
-                const text = items[i].textContent || items[i].innerText;
-                items[i].style.display = text.toLowerCase().includes(input) ? '' : 'none';
-            }
-        }
-
-        // Daily Teaser Feedback
-        function checkTeaser(ans) {
-            const feedback = document.getElementById('teaser-feedback');
-            feedback.classList.remove('hidden', 'bg-emerald-100', 'text-emerald-700', 'bg-rose-100', 'text-rose-700');
-            if (ans === 900) {
-                feedback.classList.add('bg-emerald-100', 'text-emerald-700');
-                feedback.textContent = 'Correct! (7 - 2) × 180 = 900° 🎉';
-            } else {
-                feedback.classList.add('bg-rose-100', 'text-rose-700');
-                feedback.textContent = 'Incorrect, try again! Remember (n-2) × 180°';
-            }
-        }
+        // INITIALIZE ON LOAD
+        window.onload = function() {
+            drawTriangle();
+            runSohCalc();
+            runLineCalc();
+        };
     </script>
+
 </body>
 </html>
-                      
